@@ -44,7 +44,7 @@ public class AdjSetKnot implements Knot
 
     // public void clone()
 
-    public AdjSetKnot.Crossing addCrossing()
+    public Knot.Crossing addCrossing()
     {
     	//add to this knot a new crossing
     	AdjSetKnot.Crossing crossing = new AdjSetKnot.Crossing();
@@ -62,12 +62,17 @@ public class AdjSetKnot implements Knot
     	{
     		size++;
     	}
+
+        return crossing;
     }
 
     public Knot.Arc addArc(Knot.Crossing source, Knot.Crossing target, int sourceOrient, int targetOrient)
     {
     	//add outgoing arc to the array label on source
-    	source.addArc(target, sourceOrient, targetOrient);
+
+        AdjSetKnot.Crossing s = (AdjSetKnot.Crossing) source;
+        AdjSetKnot.Crossing t = (AdjSetKnot.Crossing) target;
+    	s.addArc(t, sourceOrient, targetOrient);
 
     	return null;
     }
@@ -92,7 +97,7 @@ public class AdjSetKnot implements Knot
     ///////////////////////// Inner Classes for Crossings and Arcs - and iterators /////////////////////////
 
 
-    private static class Crossing implements Knot.Crossing
+    private static class Crossing implements Knot.Crossing 
     {
     	// each Crossing object represents a crossing of the knot
     	// it has a link to the previous and next crossings along the knot
@@ -205,13 +210,15 @@ public class AdjSetKnot implements Knot
     	private AdjSetKnot.Crossing currentCrossing;
     	private int incomingArcOrient;
     	private boolean leftOnTheWalk;
-    	private boolean finished;
+        private boolean halfway;
+       	private boolean finished;
 
     	private WalkIterator()
     	{
     		currentCrossing = firstCrossing;
     		incomingArcOrient = -1;
     		leftOnTheWalk = false;
+            halfway = false;
     		finished = false;
     	}
 
@@ -221,10 +228,15 @@ public class AdjSetKnot implements Knot
     		{
     			return (!finished);
     		}
-    		else
+    		else if (currentCrossing != firstCrossing && halfway == false)
     		{
+                halfway = true;
     			return (currentCrossing != firstCrossing);
     		}
+            else
+            {
+                return (currentCrossing != firstCrossing);
+            }
     	}
 
     	public AdjSetKnot.Crossing next()
@@ -255,10 +267,17 @@ public class AdjSetKnot implements Knot
     			incomingArcOrient = outArcs[incomingArcOrient].getTargetOrientation();
     		}
 
-			if (nextInWalk == null)
-			{
-				throw new KnotNotClosedException("Failed to walk around the knot because it was not closed.");
+			try
+            {
+                if (nextInWalk == null)
+			    {
+				    throw new AdjSetKnot.KnotNotClosedException("Failed to walk around the knot because it was not closed.");
+                }
 			}
+            catch (AdjSetKnot.KnotNotClosedException e)
+            {
+                System.out.println("Failed to walk around th knot because it was not closed.");
+            }
 
 	   		currentCrossing = currentCrossing.nextCrossing;
     		
