@@ -66,6 +66,29 @@ public class AdjSetKnot implements Knot
         return crossing;
     }
 
+    public Knot.Crossing addCrossing(String n)
+    {
+        //add to this knot a new crossing
+        AdjSetKnot.Crossing crossing = new AdjSetKnot.Crossing();
+
+        crossing.prevCrossing = null;
+        crossing.nextCrossing = firstCrossing;
+        crossing.name = n;
+        firstCrossing = crossing;
+
+        if (size == -1)
+        {
+            System.out.println("Looks like this is your fist crossing");
+            size = 1;
+        }
+        else
+        {
+            size++;
+        }
+
+        return crossing;
+    }
+
     public Knot.Arc addArc(Knot.Crossing source, Knot.Crossing target, int sourceOrient, int targetOrient)
     {
     	//add outgoing arc to the array label on source
@@ -87,6 +110,11 @@ public class AdjSetKnot implements Knot
 
     }
 
+    public Knot.Crossing getFirstCrossing()
+    {
+        return firstCrossing;
+    }
+
     ///////////////////////// Iterators /////////////////////////
 
     public Iterator walk()
@@ -104,6 +132,7 @@ public class AdjSetKnot implements Knot
     	// it has an array of links to its outgoing arcs
     	private AdjSetKnot.Crossing prevCrossing;
     	private AdjSetKnot.Crossing nextCrossing;
+        private String name;
     	private AdjSetKnot.Arc[] outArcs;
 
     	private Crossing()
@@ -112,6 +141,19 @@ public class AdjSetKnot implements Knot
     		this.nextCrossing = null;
     		this.outArcs = new AdjSetKnot.Arc[2]; //there are always two outArcs;
     	}
+
+        private Crossing(String n)
+        {
+            this.prevCrossing = null;
+            this.nextCrossing = null;
+            this.name = n;
+            this.outArcs = new AdjSetKnot.Arc[2]; //there are always two outArcs;
+        }
+
+        public String getName()
+        {
+            return this.name;
+        }
 
     	//get the array of outgoing arcs from this crossing 
     	public AdjSetKnot.Arc[] getOutArcs()
@@ -140,6 +182,7 @@ public class AdjSetKnot implements Knot
     		}
     	}
     }
+
 
     //////////////////////////////////////////////////
 
@@ -239,10 +282,11 @@ public class AdjSetKnot implements Knot
             }
     	}
 
-    	public AdjSetKnot.Crossing next()
+    	public Knot.Crossing next()
     	{
     		if (currentCrossing == null)
     		{
+                System.out.println("What is going on!");
     			throw new NoSuchElementException();
     		}
 
@@ -279,7 +323,7 @@ public class AdjSetKnot implements Knot
                 System.out.println("Failed to walk around th knot because it was not closed.");
             }
 
-	   		currentCrossing = currentCrossing.nextCrossing;
+	   		currentCrossing = nextInWalk;
     		
     		return nextInWalk;
     	}

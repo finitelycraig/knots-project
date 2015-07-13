@@ -1,3 +1,6 @@
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 public class TrefoilWalk
 {
 	private static final int OVER = 0;
@@ -5,13 +8,13 @@ public class TrefoilWalk
 
 	public static void main(String[] args)
 	{
-		Knot trefoil = new AdjSetKnot();
-
+		AdjSetKnot trefoil = new AdjSetKnot();
+		int knotsVisited = 0;
 
 		//add the crossings
-		Knot.Crossing one = trefoil.addCrossing();
-		Knot.Crossing two = trefoil.addCrossing();
-		Knot.Crossing three = trefoil.addCrossing();
+		Knot.Crossing one = trefoil.addCrossing("first");
+		Knot.Crossing two = trefoil.addCrossing("second");
+		Knot.Crossing three = trefoil.addCrossing("third");
 
 		int size = trefoil.size();
 
@@ -24,6 +27,30 @@ public class TrefoilWalk
 		Knot.Arc twoToThreeIn = trefoil.addArc(two, three, OVER, UNDER);
 		Knot.Arc threeToOneIn = trefoil.addArc(three, one, UNDER, OVER);
 
+		if (trefoil.getFirstCrossing() == null)
+		{
+			System.out.println("oops");
+		}
+		else
+		{
+			System.out.println("This knot has a first crossing");
+		}
+
+
+
+		Iterator walk = trefoil.walk();
+		Knot.Crossing crossing;
+
+		while (walk.hasNext())
+		{
+			knotsVisited++;
+			crossing = (Knot.Crossing) walk.next();
+
+			System.out.println("Visited " + knotsVisited + " knots. Currently we're visiting " + crossing.getName());
+
+		}
+
+		// System.out.println("We've visited " + knotsVisited + " crossings in this walk");
 
 	}
 }

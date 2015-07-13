@@ -53,6 +53,7 @@ public interface Knot
 	public interface Crossing
 	{
 		// Each Knot.Crossing object is a directed graph node
+		public String getName();
 	}
 
 	public interface Arc
