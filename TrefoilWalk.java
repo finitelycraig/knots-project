@@ -8,7 +8,7 @@ public class TrefoilWalk
 
 	public static void main(String[] args)
 	{
-		AdjSetKnot trefoil = new AdjSetKnot();
+		Knot trefoil = new AdjSetKnot();
 		int knotsVisited = 0;
 
 		//add the crossings
@@ -18,7 +18,7 @@ public class TrefoilWalk
 
 		int size = trefoil.size();
 
-		System.out.println("The trefoil contains " + size);
+		System.out.println("The trefoil contains " + size + " crossings.");
 
 		Knot.Arc oneToTwoOut = trefoil.addArc(one, two, OVER, UNDER);
 		Knot.Arc twoToThreeOut = trefoil.addArc(two, three, UNDER, OVER);
@@ -36,8 +36,6 @@ public class TrefoilWalk
 			System.out.println("This knot has a first crossing");
 		}
 
-
-
 		Iterator walk = trefoil.walk();
 		Knot.Crossing crossing;
 
@@ -46,9 +44,13 @@ public class TrefoilWalk
 			knotsVisited++;
 			crossing = (Knot.Crossing) walk.next();
 
-			System.out.println("Visited " + knotsVisited + " knots. Currently we're visiting " + crossing.getName());
+			System.out.println("Visited " + knotsVisited + " crossing(s). Currently we're visiting " + crossing.getName());
 
 		}
+
+		Colourist colourist = new Colourist(trefoil, 3);
+
+		colourist.isColourable();
 
 		// System.out.println("We've visited " + knotsVisited + " crossings in this walk");
 

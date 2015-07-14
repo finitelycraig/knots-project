@@ -246,7 +246,7 @@ public class AdjSetKnot implements Knot
 
     //////////////////////////////////////////////////
 
-    private class WalkIterator implements Iterator
+    private class WalkIterator implements Knot.WalkIterator
     {
     	//the walk iterator walks around the knot from the first crossing, untill it reaches the first crossing again
 
@@ -267,15 +267,22 @@ public class AdjSetKnot implements Knot
 
     	public boolean hasNext()
     	{
+            //if we've not left yet then return true
     		if (leftOnTheWalk == false)
     		{
-    			return (!finished);
+    			return true;
     		}
-    		else if (currentCrossing != firstCrossing && halfway == false)
-    		{
+    		else if (currentCrossing == firstCrossing && halfway == false)
+    		{   //if we have gone halfway though
                 halfway = true;
-    			return (currentCrossing != firstCrossing);
+                // System.out.println("halfway");
+    			return true;
     		}
+            else if (currentCrossing != firstCrossing && halfway == true)
+            {   // if we've gone over half way though
+                // System.out.println("past halfway");
+                return true;
+            }
             else
             {
                 return (currentCrossing != firstCrossing);
@@ -324,7 +331,7 @@ public class AdjSetKnot implements Knot
             }
 
 	   		currentCrossing = nextInWalk;
-    		
+
     		return nextInWalk;
     	}
 
@@ -332,6 +339,11 @@ public class AdjSetKnot implements Knot
     	{
     		//not implemented
     	}
+
+        public int getIncomingArcOrient()
+        {
+            return this.incomingArcOrient;
+        }
 
     }
 

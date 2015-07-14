@@ -22,13 +22,16 @@ public interface Knot
 	////////// Transformers //////////
 
 	public void clear();
-	// makes this knot empty
+	// makes this knot 
+
+	public Knot.Crossing getFirstCrossing();
 
 	// public Knot clone();
 	// Returns a clone of this knot
 
 	public Knot.Crossing addCrossing();
 	// Add to this knot a new crossing, with no connected arcs and return the new crossing
+	public Knot.Crossing addCrossing(String name);
 
 	// public void addArc(Knot.Crossing a, Knot.Crossing b);
 	// // Add to this knot a new arc connecting crossings a and b.  the arc's source is a and its target is b
@@ -72,5 +75,10 @@ public interface Knot
 
 		// public void setTargetOrientation(int orientation);
 		// // Set the over/under orientation at the arc's target crossing 
+	}
+
+	public interface WalkIterator extends Iterator
+	{
+		public int getIncomingArcOrient();
 	}
 }
