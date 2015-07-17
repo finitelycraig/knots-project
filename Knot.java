@@ -48,7 +48,7 @@ public interface Knot
 
 	////////// Iterators //////////
 
-	public Iterator walk();
+	public Knot.WalkIterator walk();
 	// walk along the knot from a in the direction of the over crossing arc (with source orientation OVER)
 
 	////////// Inner interfaces //////////
@@ -57,6 +57,10 @@ public interface Knot
 	{
 		// Each Knot.Crossing object is a directed graph node
 		public String getName();
+
+		public Knot.Arc[] getOutArcs();
+
+		public int getOrderAdded();
 	}
 
 	public interface Arc

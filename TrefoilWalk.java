@@ -36,7 +36,7 @@ public class TrefoilWalk
 			System.out.println("This knot has a first crossing");
 		}
 
-		Iterator walk = trefoil.walk();
+		Knot.WalkIterator walk = trefoil.walk();
 		Knot.Crossing crossing;
 
 		while (walk.hasNext())
@@ -44,7 +44,7 @@ public class TrefoilWalk
 			knotsVisited++;
 			crossing = (Knot.Crossing) walk.next();
 
-			System.out.println("Visited " + knotsVisited + " crossing(s). Currently we're visiting " + crossing.getName());
+			System.out.println("Visited " + knotsVisited + " crossing(s). Currently we're visiting " + crossing.getName() + ", which was the " + crossing.getOrderAdded() + " crossing added to this knot.");
 
 		}
 

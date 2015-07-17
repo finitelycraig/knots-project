@@ -23,7 +23,7 @@ public class AdjSetKnot implements Knot
 
 		// TODO maybe set size to minus 1, since the trivial knot will have size 0
 		// but all knots uwith size 1 or 2 are trivial
-		size = -1;
+		size = 0  ;
 	}
 
     ///////////////////////// Accessors /////////////////////////
@@ -117,7 +117,7 @@ public class AdjSetKnot implements Knot
 
     ///////////////////////// Iterators /////////////////////////
 
-    public Iterator walk()
+    public Knot.WalkIterator walk()
     {
     	return new AdjSetKnot.WalkIterator();
     }
@@ -125,7 +125,7 @@ public class AdjSetKnot implements Knot
     ///////////////////////// Inner Classes for Crossings and Arcs - and iterators /////////////////////////
 
 
-    private static class Crossing implements Knot.Crossing 
+    private class Crossing implements Knot.Crossing 
     {
     	// each Crossing object represents a crossing of the knot
     	// it has a link to the previous and next crossings along the knot
@@ -134,6 +134,7 @@ public class AdjSetKnot implements Knot
     	private AdjSetKnot.Crossing nextCrossing;
         private String name;
     	private AdjSetKnot.Arc[] outArcs;
+        private int orderAdded = size;
 
     	private Crossing()
     	{
@@ -181,12 +182,17 @@ public class AdjSetKnot implements Knot
     			System.out.println("Tried adding an arc but the orientation was neither OVER (0) not UNDER (1)");
     		}
     	}
+
+        public int getOrderAdded()
+        {
+            return orderAdded;
+        }
     }
 
 
     //////////////////////////////////////////////////
 
-    private static class Arc implements Knot.Arc
+    private class Arc implements Knot.Arc
     {
     	//each arc has a link to its source and target crossings 
     	//and an attribute to determine its orientation at each crossing
