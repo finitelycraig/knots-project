@@ -68,11 +68,13 @@ public interface Knot
 		// Each Knot.Arc object is a directed graph edge, with source and target labels regarding orientation 
 		// at source and target crossings 
 
-		// public int getSourceOrientation();
-		// // Return the over/under orientation at the arc's source crossing 
+		public Knot.Crossing getTarget();
 
-		// public int getTargetOrientation();
-		// // Return the over/under orientation at the arc's target crossing 
+		public int getSourceOrientation();
+		// Return the over/under orientation at the arc's source crossing 
+
+		public int getTargetOrientation();
+		// Return the over/under orientation at the arc's target crossing 
 
 		// public void setSourceOrientation(int orientation);
 		// // Set the over/under orientation at the arc's source crossing 

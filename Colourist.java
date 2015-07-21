@@ -59,6 +59,7 @@ public class Colourist
     	Knot.Crossing crossing;
     	Knot.Crossing target;
     	int crossingNum;
+    	int incomingOrient;
     	int targetNum;
     	int targetOrient;
     	Knot.Arc[] outArcs = new Knot.Arc[2]; 
@@ -82,8 +83,8 @@ public class Colourist
     		}
 
     		target = outArcs[incomingOrient].getTarget();
-    		targetNum = taget.getOrderAdded();
-    		targetOrient = outArcs[incomingOrient].getTargetOrienation();
+    		targetNum = target.getOrderAdded();
+    		targetOrient = outArcs[incomingOrient].getTargetOrientation();
 
     		if (targetOrient == Knot.OVER)
     		{
@@ -97,6 +98,29 @@ public class Colourist
     		i++;
 
 	    	// then 2x - y - z = 0 (mod p), where x is the number on the over crossings and y and z are the unders
+     	}
+
+     	for (int j = 0; j <= numOfCrossings; j++)
+     	{
+     		int over1, over2;
+     		int under1, under2;
+
+     		over1 = colouringPositions[j].removeFirst();
+     		over2 = colouringPositions[j].removeFirst();
+     		under1 = colouringPositions[j].removeLast();
+     		under2 = colouringPositions[j].removeLast();
+
+     		// overarcs at a crossing must take the same colour
+     		model.addConstraint(eq(arc[over1], arc[over2]));
+
+     		// labels on arcs have to conform at crossings to the equation
+     		//		2x - y - z = 0 mod p
+     		//
+     		// where x is an over crossing and y and z are the undercrossings
+     		// WLOG we can choose either overcrossing
+     		model.addConstraint(mod(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), constant(0), constant(pColours)));
+
+
      	}
 
     	return true;
