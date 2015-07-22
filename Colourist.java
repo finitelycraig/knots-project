@@ -6,6 +6,8 @@ import choco.cp.solver.CPSolver;
 import choco.kernel.model.Model;
 import choco.kernel.solver.Solver;
 import choco.kernel.model.variables.integer.IntegerVariable;
+import choco.kernel.model.variables.integer.IntegerExpressionVariable;
+import choco.kernel.model.constraints.Constraint;
 import choco.kernel.solver.variables.integer.IntDomainVar;
 import choco.cp.solver.search.integer.varselector.MinDomain;
 import choco.cp.solver.search.integer.varselector.StaticVarOrder;
@@ -16,6 +18,7 @@ public class Colourist
 	private Model model;  
     private Solver solver;
     private int pColours; //colouring is done mod p
+    private int[] solutions;
     private int numOfArcs;
     private int numOfCrossings;
     private Knot.Arc[] arcAtPosition;
@@ -25,6 +28,7 @@ public class Colourist
 	// deques with the rule that outgoing crossings are to the front, incoming crossings
 	// to the rear
     private IntegerVariable[] arc; //arc[i] is an integer variable with domain [0, p - 1]
+    private IntegerVariable[] negArc;
 
     public Colourist(Knot k, int colours)
     {
@@ -33,23 +37,28 @@ public class Colourist
     	this.numOfArcs = (this.numOfCrossings) * 2;
     	this.pColours = colours;
 
-    	// create an array of arc objects of length numOfCrossings * 2 , each arc ois placed in the array
+    	// create an array of arc objects of length numOfCrossings * 2 , each arc is placed in the array
     	// at the index corresponding to its poistion in the walk.  And example for the trefoil is given below
     	// where the walk starts on the overarc at the top left hand crossing
     	//                           
     	//							---
-    	//						 1 /   \
-    	//                        /  4  \
+    	//						 0 /   \
+    	//                        /  3  \
     	//                    ---| ----------        
     	//                   /    \     /    \
-    	//                   |     \6  /2    |
-    	//                    \3    \ /     /
-    	//					   \	 /	   /5
+    	//                   |     \5  /1    |
+    	//                    \2    \ /     /
+    	//					   \	 /	   /4
     	//						\---/ \---/
 
     	this.arcAtPosition = new Knot.Arc[numOfArcs];
 
     	arc = makeIntVarArray("arc ", numOfArcs, 0, pColours - 1);
+
+    	solutions = new int[3];
+    	solutions[0] = (-1) * pColours;
+    	solutions[1] = 0;
+    	solutions[2] = pColours;
     }
 
     public boolean isColourable()
@@ -118,9 +127,15 @@ public class Colourist
      		//
      		// where x is an over crossing and y and z are the undercrossings
      		// WLOG we can choose either overcrossing
-     		model.addConstraint(mod(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), constant(0), constant(pColours)));
+     		// model.addConstraint(mod(minus(minus(mult(arc[over1], constant(2)), arc[under1]), arc[under2]), constant(0), constant(pColours)));
 
+     		Constraint negP = eq(mult(arc[over1], 2), ((-1) * pColours));
+     		Constraint zero = eq(mult(arc[over1], 2), 0);
+     		Constraint p = eq(mult(arc[over1], 2), pColours);
+     		model.addConstraint(or(negP, zero, p));
 
+     		// IntegerVariable lhs = minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]);
+     		// model.addConstraint(mod(lhs, constant(0), pColours));
      	}
 
     	return true;
