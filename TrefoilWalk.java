@@ -50,7 +50,14 @@ public class TrefoilWalk
 
 		Colourist colourist = new Colourist(trefoil, 3);
 
-		colourist.isColourable();
+		if(colourist.isColourable())
+		{
+			System.out.println("The colouring works");
+		}
+		else
+		{
+			System.out.println("The colouring failed");
+		}
 
 		// System.out.println("We've visited " + knotsVisited + " crossings in this walk");
 
