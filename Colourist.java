@@ -12,8 +12,20 @@ import choco.kernel.solver.variables.integer.IntDomainVar;
 import choco.cp.solver.search.integer.varselector.MinDomain;
 import choco.cp.solver.search.integer.varselector.StaticVarOrder;
 
+
+
 public class Colourist
 {
+public static final String ANSI_RESET = "\u001B[0m";
+public static final String ANSI_BLACK = "\u001B[30m";
+public static final String ANSI_RED = "\u001B[31m";
+public static final String ANSI_GREEN = "\u001B[32m";
+public static final String ANSI_YELLOW = "\u001B[33m";
+public static final String ANSI_BLUE = "\u001B[34m";
+public static final String ANSI_PURPLE = "\u001B[35m";
+public static final String ANSI_CYAN = "\u001B[36m";
+public static final String ANSI_WHITE = "\u001B[37m";
+
 	private Knot knot; 
 	private Model model;  
     private Solver solver;
@@ -128,12 +140,12 @@ public class Colourist
     		if (incomingOrient == Knot.OVER) //add to the front of the dq for the crossingNum
     		{
     			// System.out.println("Colourist pushing over.");
-    			System.out.println("pushed over " + i + " to crossing " + crossingNum);
+    			// System.out.println("pushed over " + i + " to crossing " + crossingNum);
     			colouringPositions.pushOver(crossingNum, i);
     		}
     		else
     		{
-    			System.out.println("pushed under " + i + " to crossing " + crossingNum);
+    			// System.out.println("pushed under " + i + " to crossing " + crossingNum);
     			colouringPositions.pushUnder(crossingNum, i);
     		}
 
@@ -143,12 +155,12 @@ public class Colourist
 
     		if (targetOrient == Knot.OVER) /// i is the wrong number
     		{
-    			System.out.println("pushed over " + i + " to crossing " + crossingNum + " ... target");
+    			// System.out.println("pushed over " + i + " to crossing " + crossingNum + " ... target");
     			colouringPositions.pushOver(targetNum, i);
     		}
     		else
     		{
-    			System.out.println("pushed under " + i + " to crossing " + crossingNum + " ... target");
+    			// System.out.println("pushed under " + i + " to crossing " + crossingNum + " ... target");
     			colouringPositions.pushUnder(targetNum, i);
     		}
 
@@ -216,7 +228,7 @@ public class Colourist
      		// System.out.println("arc[over1] " + arc[over1]);
      		// System.out.println("arc[over2] " + arc[over2]);
 
-     		System.out.println(" ** making these equal " + arc[over1] + "  |  " + arc[over2]);
+     		// System.out.println(" ** making these equal " + arc[over1] + "  |  " + arc[over2]);
      		model.addConstraint(eq(arc[over1], arc[over2]));
 
      		// labels on arcs have to conform at crossings to the equation
@@ -248,11 +260,41 @@ public class Colourist
 
     	boolean success = solver.solve();
 
-    	for (int k = 0; k < numOfArcs; k++)
+    	int solution = -1;
+    	String colour;
+
+    	// System.out.println(ANSI_GREEN);
+
+    	if(success)
     	{
-			System.out.println(k + " " + solver.getVar(arc[k]).getVal());
+	    	for (int k = 0; k < numOfArcs; k++)
+	    	{
+	    		solution = solver.getVar(arc[k]).getVal();
+
+	    		switch (solution)
+	    		{
+	    			case 0: colour = ANSI_RED;
+	    					break;
+	    			case 1: colour = ANSI_GREEN;
+	    					break;
+	    			case 2: colour = ANSI_BLUE;
+	    					break;
+	    			case 3: colour = ANSI_YELLOW;
+	    					break;
+	    			case 4: colour = ANSI_CYAN;
+	    					break;
+	    			default: colour = ANSI_WHITE;
+	    					break;
+	    		}
+
+				System.out.println(colour + "arc " + k + " colour " + solution + ANSI_RESET);
+
+	    	}
     	}
+
+    	System.out.println("nodes: "+ solver.getNodeCount() +"   cpu: "+ solver.getTimeCount());
 
     	return success;
     }
 }
+

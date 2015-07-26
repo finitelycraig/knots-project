@@ -39,16 +39,16 @@ public class TrefoilWalk
 		Knot.WalkIterator walk = trefoil.walk();
 		Knot.Crossing crossing;
 
-		while (walk.hasNext())
-		{
-			knotsVisited++;
-			crossing = (Knot.Crossing) walk.next();
+		// while (walk.hasNext())
+		// {
+		// 	knotsVisited++;
+		// 	crossing = (Knot.Crossing) walk.next();
 
-			System.out.println("Visited " + knotsVisited + " crossing(s). Currently we're visiting " + crossing.getName() + ", which was the " + crossing.getOrderAdded() + " crossing added to this knot.");
+		// 	System.out.println("Visited " + knotsVisited + " crossing(s). Currently we're visiting " + crossing.getName() + ", which was the " + crossing.getOrderAdded() + " crossing added to this knot.");
 
-		}
+		// }
 
-		Colourist colourist = new Colourist(trefoil, 3);
+		Colourist colourist = new Colourist(trefoil, 5);
 
 		if(colourist.isColourable())
 		{
