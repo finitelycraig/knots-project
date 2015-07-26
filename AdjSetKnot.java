@@ -26,6 +26,11 @@ public class AdjSetKnot implements Knot
 		size = 0  ;
 	}
 
+    // public AdjSetKnot(int[] gaussCode)
+    // {
+        
+    // }
+
     ///////////////////////// Accessors /////////////////////////
 
     public int size() 

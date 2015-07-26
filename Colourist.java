@@ -60,6 +60,10 @@ public class Colourist
     	solutions[0] = (-1) * pColours;
     	solutions[1] = 0;
     	solutions[2] = pColours;
+
+    	model           = new CPModel();
+        solver          = new CPSolver();
+
     }
 
     public boolean isColourable()
@@ -119,12 +123,17 @@ public class Colourist
     		crossingNum = crossing.getOrderAdded();
     		incomingOrient = walk.getIncomingArcOrient();
 
+    		// System.out.println("Incoming orientation in Colourist: " + incomingOrient);
+
     		if (incomingOrient == Knot.OVER) //add to the front of the dq for the crossingNum
     		{
+    			// System.out.println("Colourist pushing over.");
+    			System.out.println("pushed over " + i + " to crossing " + crossingNum);
     			colouringPositions.pushOver(crossingNum, i);
     		}
     		else
     		{
+    			System.out.println("pushed under " + i + " to crossing " + crossingNum);
     			colouringPositions.pushUnder(crossingNum, i);
     		}
 
@@ -132,13 +141,15 @@ public class Colourist
     		targetNum = target.getOrderAdded();
     		targetOrient = outArcs[incomingOrient].getTargetOrientation();
 
-    		if (targetOrient == Knot.OVER)
+    		if (targetOrient == Knot.OVER) /// i is the wrong number
     		{
-    			colouringPositions.pushOver(crossingNum, i);
+    			System.out.println("pushed over " + i + " to crossing " + crossingNum + " ... target");
+    			colouringPositions.pushOver(targetNum, i);
     		}
     		else
     		{
-    			colouringPositions.pushUnder(crossingNum, i);
+    			System.out.println("pushed under " + i + " to crossing " + crossingNum + " ... target");
+    			colouringPositions.pushUnder(targetNum, i);
     		}
 
     		i++;
@@ -176,9 +187,16 @@ public class Colourist
      	// 	Constraint zero = eq(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), 0);
      	// 	Constraint p = eq(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), pColours);
      	// 	model.addConstraint(or(negP, zero, p));
-     	// }
-     	for (int j = 0; j < 2; j++)
+     	// 
+
+
+
+     	////////////////////////////////////////////
+
+
+     	for (int j = 0; j < 3; j++)
      	{
+     		// System.out.println("                                                     j = " + j);
      		int over1, over2;
      		int under1, under2;
 
@@ -187,7 +205,18 @@ public class Colourist
      		under1 = colouringPositions.popUnder(j);
      		under2 = colouringPositions.popUnder(j);
 
+     		// System.out.println("over1 = " + over1 + "  |  over2 = " + over2);
+     		// System.out.println("under1 = " + under1 + "  |  under2 = " + under2);
+
+
      		// overarcs at a crossing must take the same colour
+
+     		// System.out.println("arc length" + arc.length);
+
+     		// System.out.println("arc[over1] " + arc[over1]);
+     		// System.out.println("arc[over2] " + arc[over2]);
+
+     		System.out.println(" ** making these equal " + arc[over1] + "  |  " + arc[over2]);
      		model.addConstraint(eq(arc[over1], arc[over2]));
 
      		// labels on arcs have to conform at crossings to the equation
@@ -197,6 +226,8 @@ public class Colourist
      		// WLOG we can choose either overcrossing
      		// model.addConstraint(mod(minus(minus(mult(arc[over1], constant(2)), arc[under1]), arc[under2])
      		//, constant(0), constant(pColours)));
+
+     		// System.out.println("EQUATION ---------> 2*" + over1 + " - " + under1 + " - " + under2 + " = 0");
 
      		Constraint negP = eq(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), ((-1) * pColours));
      		Constraint zero = eq(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), 0);
@@ -215,6 +246,13 @@ public class Colourist
 
      	solver.read(model);
 
-    	return solver.solve();
+    	boolean success = solver.solve();
+
+    	for (int k = 0; k < numOfArcs; k++)
+    	{
+			System.out.println(k + " " + solver.getVar(arc[k]).getVal());
+    	}
+
+    	return success;
     }
 }
