@@ -48,7 +48,7 @@ public class TrefoilWalk
 
 		// }
 
-		Colourist colourist = new Colourist(trefoil, 5);
+		Colourist colourist = new Colourist(trefoil, 3);
 
 		if(colourist.isColourable())
 		{
