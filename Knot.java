@@ -46,6 +46,9 @@ public interface Knot
 	// public Knot.Arc removeArc(Knot.Arc x);
 	// // Remove arc x from the knot
 
+    public Knot.Crossing getByOrderAdded(int i);
+
+
 	////////// Iterators //////////
 
 	public Knot.WalkIterator walk();

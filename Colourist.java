@@ -128,6 +128,8 @@ public static final String ANSI_WHITE = "\u001B[37m";
 	    // 	// then 2x - y - z = 0 (mod p), where x is the number on the over crossings and y and z are the unders
      // 	}
 
+    	System.out.println("Trying to colour a knot of size " + numOfCrossings + " with " + numOfArcs + " arcs.");
+
     	while(walk.hasNext())
     	{
     		crossing = (Knot.Crossing) walk.next();
@@ -140,12 +142,12 @@ public static final String ANSI_WHITE = "\u001B[37m";
     		if (incomingOrient == Knot.OVER) //add to the front of the dq for the crossingNum
     		{
     			// System.out.println("Colourist pushing over.");
-    			// System.out.println("pushed over " + i + " to crossing " + crossingNum);
+    			System.out.println("pushed over " + i + " to crossing " + crossingNum);
     			colouringPositions.pushOver(crossingNum, i);
     		}
     		else
     		{
-    			// System.out.println("pushed under " + i + " to crossing " + crossingNum);
+    			System.out.println("pushed under " + i + " to crossing " + crossingNum);
     			colouringPositions.pushUnder(crossingNum, i);
     		}
 
@@ -155,12 +157,12 @@ public static final String ANSI_WHITE = "\u001B[37m";
 
     		if (targetOrient == Knot.OVER) /// i is the wrong number
     		{
-    			// System.out.println("pushed over " + i + " to crossing " + crossingNum + " ... target");
+    			System.out.println("pushed over " + i + " to crossing " + crossingNum + " ... target");
     			colouringPositions.pushOver(targetNum, i);
     		}
     		else
     		{
-    			// System.out.println("pushed under " + i + " to crossing " + crossingNum + " ... target");
+    			System.out.println("pushed under " + i + " to crossing " + crossingNum + " ... target");
     			colouringPositions.pushUnder(targetNum, i);
     		}
 

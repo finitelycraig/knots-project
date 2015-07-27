@@ -120,11 +120,36 @@ public class AdjSetKnot implements Knot
         return firstCrossing;
     }
 
+    public Knot.Crossing getByOrderAdded(int i)
+    {
+        Iterator it = this.iterator();
+        Knot.Crossing crossing;
+
+        while (it.hasNext())
+        {
+            crossing = (Knot.Crossing) it.next();
+            {
+                if (crossing.getOrderAdded() == i)
+                {
+                    return crossing;
+                }
+            }
+        }
+
+        return null;
+
+    }
+
     ///////////////////////// Iterators /////////////////////////
 
     public Knot.WalkIterator walk()
     {
     	return new AdjSetKnot.WalkIterator();
+    }
+
+    public Iterator iterator()
+    {
+        return new AdjSetKnot.OrderAddedIterator();
     }
 
     ///////////////////////// Inner Classes for Crossings and Arcs - and iterators /////////////////////////
@@ -139,7 +164,7 @@ public class AdjSetKnot implements Knot
     	private AdjSetKnot.Crossing nextCrossing;
         private String name;
     	private AdjSetKnot.Arc[] outArcs;
-        private int orderAdded = size;
+        private int orderAdded = size + 1;
 
     	private Crossing()
     	{
@@ -159,6 +184,16 @@ public class AdjSetKnot implements Knot
         public String getName()
         {
             return this.name;
+        }
+
+        public AdjSetKnot.Crossing getNextCrossing()
+        {
+            return this.nextCrossing;
+        }
+
+        public AdjSetKnot.Crossing getPrevCrossing()
+        {
+            return this.prevCrossing;
         }
 
     	//get the array of outgoing arcs from this crossing 
@@ -266,7 +301,7 @@ public class AdjSetKnot implements Knot
     	private boolean leftOnTheWalk;
         private boolean halfway;
        	private boolean finished;
-
+        
     	private WalkIterator()
     	{
     		currentCrossing = firstCrossing;
@@ -286,12 +321,12 @@ public class AdjSetKnot implements Knot
     		else if (currentCrossing == firstCrossing && halfway == false)
     		{   //if we have gone halfway though
                 halfway = true;
-                // System.out.println("halfway");
+                System.out.println("halfway");
     			return true;
     		}
             else if (currentCrossing != firstCrossing && halfway == true)
             {   // if we've gone over half way though
-                // System.out.println("past halfway");
+                System.out.println("past halfway");
                 return true;
             }
             else
@@ -356,6 +391,47 @@ public class AdjSetKnot implements Knot
             return this.incomingArcOrient;
         }
 
+    }
+
+    private class OrderAddedIterator implements Iterator
+    {
+        private AdjSetKnot.Crossing currentCrossing;
+
+        public OrderAddedIterator()
+        {
+            currentCrossing = firstCrossing;
+        }
+
+        public boolean hasNext()
+        {
+            // boolean success = (currentCrossing != null);
+
+            // System.out.println(" " + success + " currentCrossing " + currentCrossing.getOrderAdded());
+            return (currentCrossing != null);
+        }
+
+        public Knot.Crossing next()
+        {
+            // int n = currentCrossing.getOrderAdded();
+
+            // System.out.println("" + n);
+
+            Knot.Crossing result = currentCrossing;
+
+            if (result == null)
+            {
+                throw new NoSuchElementException();
+            }
+
+            currentCrossing = currentCrossing.getNextCrossing();
+ 
+            return result;
+        }
+
+        public void remove()
+        {
+            //not implemented
+        }
     }
 
     ///////////////////////// Custom exeptions /////////////////////////
