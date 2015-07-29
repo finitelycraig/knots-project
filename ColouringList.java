@@ -23,12 +23,12 @@ public class ColouringList
 			}
 		}
 
-		System.out.println(" *** ColouringList constructor.");
+		// System.out.println(" *** ColouringList constructor.");
 		//add all the crossings from the knot to the list
 		addCrossings();
-		System.out.println("Finished adding crossings");
+		// System.out.println("Finished adding crossings");
 
-		System.out.println("Size of the list is " + list.length);
+		// System.out.println("Size of the list is " + list.length);
 	}
 
 	//adds all crossings from the knot into the list, does more work than it should TODOd
@@ -202,6 +202,11 @@ public class ColouringList
 		}
 
 		return list[i].popOver();
+	}
+
+	public int size()
+	{
+		return size;
 	}
 
 	public Iterator iterator()

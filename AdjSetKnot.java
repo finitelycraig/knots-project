@@ -105,6 +105,17 @@ public class AdjSetKnot implements Knot
     	return null;
     }
 
+    public void removeCrossing(Knot.Crossing cross)
+    {
+        for (AdjSetKnot.Crossing c = firstCrossing; c!=null; c = c.nextCrossing)
+        {
+            for (int i = 0 ; i < 2 ; i++)
+            {
+
+            }
+        }
+    }
+
     public void reverse()
     {
 
@@ -227,6 +238,7 @@ public class AdjSetKnot implements Knot
         {
             return orderAdded;
         }
+
     }
 
 
@@ -316,21 +328,23 @@ public class AdjSetKnot implements Knot
             //if we've not left yet then return true
     		if (leftOnTheWalk == false)
     		{
+                // System.out.println("just left");
     			return true;
     		}
     		else if (currentCrossing == firstCrossing && halfway == false)
     		{   //if we have gone halfway though
                 halfway = true;
-                System.out.println("halfway");
+                // System.out.println("halfway");
     			return true;
     		}
             else if (currentCrossing != firstCrossing && halfway == true)
             {   // if we've gone over half way though
-                System.out.println("past halfway");
+                // System.out.println("past halfway");
                 return true;
             }
             else
             {
+                // System.out.println("else");
                 return (currentCrossing != firstCrossing);
             }
     	}
@@ -352,7 +366,8 @@ public class AdjSetKnot implements Knot
     		if (leftOnTheWalk == false)
     		{
     			nextInWalk = outArcs[OVER].getTarget();
-    			incomingArcOrient = OVER;
+
+    			incomingArcOrient = outArcs[OVER].getTargetOrientation();
 
 				leftOnTheWalk = true;
     		}

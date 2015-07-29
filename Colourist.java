@@ -128,7 +128,7 @@ public static final String ANSI_WHITE = "\u001B[37m";
 	    // 	// then 2x - y - z = 0 (mod p), where x is the number on the over crossings and y and z are the unders
      // 	}
 
-    	System.out.println("Trying to colour a knot of size " + numOfCrossings + " with " + numOfArcs + " arcs.");
+    	// System.out.println("Trying to colour a knot of size " + numOfCrossings + " with " + numOfArcs + " arcs.");
 
     	while(walk.hasNext())
     	{
@@ -142,12 +142,12 @@ public static final String ANSI_WHITE = "\u001B[37m";
     		if (incomingOrient == Knot.OVER) //add to the front of the dq for the crossingNum
     		{
     			// System.out.println("Colourist pushing over.");
-    			System.out.println("pushed over " + i + " to crossing " + crossingNum);
+    			// System.out.println("pushed over " + i + " to crossing " + crossingNum);
     			colouringPositions.pushOver(crossingNum, i);
     		}
     		else
     		{
-    			System.out.println("pushed under " + i + " to crossing " + crossingNum);
+    			// System.out.println("pushed under " + i + " to crossing " + crossingNum);
     			colouringPositions.pushUnder(crossingNum, i);
     		}
 
@@ -157,12 +157,12 @@ public static final String ANSI_WHITE = "\u001B[37m";
 
     		if (targetOrient == Knot.OVER) /// i is the wrong number
     		{
-    			System.out.println("pushed over " + i + " to crossing " + crossingNum + " ... target");
+    			// System.out.println("pushed over " + i + " to crossing " + targetNum);
     			colouringPositions.pushOver(targetNum, i);
     		}
     		else
     		{
-    			System.out.println("pushed under " + i + " to crossing " + crossingNum + " ... target");
+    			// System.out.println("pushed under " + i + " to crossing " + targetNum);
     			colouringPositions.pushUnder(targetNum, i);
     		}
 
@@ -171,44 +171,10 @@ public static final String ANSI_WHITE = "\u001B[37m";
 	    	// then 2x - y - z = 0 (mod p), where x is the number on the over crossings and y and z are the unders
      	}
 
-
-     	//	for each crossing set the constraint that 
-     	//		2x - y - z = 0 (mod p)
-     	//
-     	// where x is the number on the over crossings and y and z are the unders
-     	// for (int j = 0; j <= numOfCrossings; j++)
-     	// {
-     	// 	int over1, over2;
-     	// 	int under1, under2;
-
-     	// 	over1 = colouringPositions.removeFirst();
-     	// 	over2 = colouringPositions[j].removeFirst();
-     	// 	under1 = colouringPositions[j].removeLast();
-     	// 	under2 = colouringPositions[j].removeLast();
-
-     	// 	// overarcs at a crossing must take the same colour
-     	// 	model.addConstraint(eq(arc[over1], arc[over2]));
-
-     	// 	// labels on arcs have to conform at crossings to the equation
-     	// 	//		2x - y - z = 0 mod p
-     	// 	//
-     	// 	// where x is an over crossing and y and z are the undercrossings
-     	// 	// WLOG we can choose either overcrossing
-     	// 	// model.addConstraint(mod(minus(minus(mult(arc[over1], constant(2)), arc[under1]), arc[under2])
-     	// 	//, constant(0), constant(pColours)));
-
-     	// 	Constraint negP = eq(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), ((-1) * pColours));
-     	// 	Constraint zero = eq(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), 0);
-     	// 	Constraint p = eq(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), pColours);
-     	// 	model.addConstraint(or(negP, zero, p));
-     	// 
+    	////////////////////////////////////////////
 
 
-
-     	////////////////////////////////////////////
-
-
-     	for (int j = 0; j < 3; j++)
+     	for (int j = 0; j < colouringPositions.size(); j++)
      	{
      		// System.out.println("                                                     j = " + j);
      		int over1, over2;
@@ -275,23 +241,29 @@ public static final String ANSI_WHITE = "\u001B[37m";
 
 	    		switch (solution)
 	    		{
-	    			case 0: colour = ANSI_RED;
-	    					break;
-	    			case 1: colour = ANSI_GREEN;
-	    					break;
-	    			case 2: colour = ANSI_BLUE;
-	    					break;
-	    			case 3: colour = ANSI_YELLOW;
-	    					break;
-	    			case 4: colour = ANSI_CYAN;
-	    					break;
-	    			default: colour = ANSI_WHITE;
+	    			// case 0: colour = ANSI_RED;
+	    			// 		break;
+	    			// case 1: colour = ANSI_GREEN;
+	    			// 		break;
+	    			// case 2: colour = ANSI_BLUE;
+	    			// 		break;
+	    			// case 3: colour = ANSI_YELLOW;
+	    			// 		break;
+	    			// case 4: colour = ANSI_CYAN;
+	    			// 		break;
+	    			// case 5: colour = ANSI_PURPLE;
+	    			// 		break;
+	    			default: colour = "";//ANSI_WHITE;
 	    					break;
 	    		}
 
-				System.out.println(colour + "arc " + k + " colour " + solution + ANSI_RESET);
+				System.out.println(colour + "arc " + k + " colour " + solution);// + ANSI_RESET);
 
 	    	}
+    	}
+    	else
+    	{
+    		System.out.println("No solution found");
     	}
 
     	System.out.println("nodes: "+ solver.getNodeCount() +"   cpu: "+ solver.getTimeCount());

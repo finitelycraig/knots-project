@@ -16,13 +16,14 @@ public class ColouringAllTheKnots
 	private Scanner sc;
 	private LinkedList<Integer> gaussList;
 
-	public ColouringAllTheKnots(String fname) throws IOException 
+	public ColouringAllTheKnots(String fname, int modP) throws IOException 
 	{
 		sc = new Scanner(new File(fname));
 
 		gaussList = new LinkedList<Integer>();
 		String guassString;
 		Knot knot;
+		int size;
 
 		while (sc.hasNextLine())
 		{
@@ -70,37 +71,25 @@ public class ColouringAllTheKnots
      				m = gaussList.get(i + 1);
      			}
      			
-     			// System.out.println("");
-     			// System.out.println("n = " + n + " " + Math.abs(n));
-     			// System.out.println("m = " + m + " " + Math.abs(m));
-
      			Knot.Crossing source = knot.getByOrderAdded(Math.abs(n));
      			Knot.Crossing target = knot.getByOrderAdded(Math.abs(m));
-
-     			// System.out.println(i + " time through ... adding a crossing from " + orient(n) + " " + source.getName() + " to " + orient(m) + " " +target.getName());
 
      			knot.addArc(source, target, orient(n), orient(m));
      		}
 
-     		// Colourist colourist = new Colourist(knot, 3);
+     		Colourist colourist = new Colourist(knot, modP);
 
-     		// colourist.isColourable();
-
-     		// System.out.println("size " + knot.size() + " firstCrossing " + knot.getFirstCrossing().getOrderAdded());
+     		colourist.isColourable();
 
 			Knot.WalkIterator walk = knot.walk();
 			Knot.Crossing crossing;
 			int knotsVisited = 0;
-
-			System.out.println(" " + knot.getFirstCrossing().getName()	);
+			int name = (Integer.parseInt(knot.getFirstCrossing().getName()) + 1);
 
 			while (walk.hasNext())
 			{
 				knotsVisited++;
 				crossing = (Knot.Crossing) walk.next();
-
-				System.out.println("Visited " + knotsVisited + " crossing(s). Currently we're visiting " + crossing.getName() + ", which was the " + crossing.getOrderAdded() + " crossing added to this knot.");
-
 			}
 
      		gaussList.clear();
@@ -153,6 +142,6 @@ public class ColouringAllTheKnots
 
 	public static void main(String[] args) throws IOException
 	{
-		ColouringAllTheKnots catk = new ColouringAllTheKnots(args[0]);
+		ColouringAllTheKnots catk = new ColouringAllTheKnots(args[0], Integer.parseInt(args[1]));
 	}
 }

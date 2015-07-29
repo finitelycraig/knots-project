@@ -40,11 +40,11 @@ public interface Knot
 	// Add to this know a new arc connecting crossings a and b.  The arc's source is a, and its over or under
 	// orientation at a is recorded.  That arc's target is b, and its over or under orientation at b is recorded
 
-	// public Knot.Crossing removeCrossing(Knot.Crossing a);
-	// // Remove crossing a from the knot. Do not remove edges
+	public void removeCrossing(Knot.Crossing a);
+	// Remove crossing a from the knot. Do not remove edges
 
-	// public Knot.Arc removeArc(Knot.Arc x);
-	// // Remove arc x from the knot
+	// public void removeArc(Knot.Arc x);
+	// Remove arc x from the knot
 
     public Knot.Crossing getByOrderAdded(int i);
 
