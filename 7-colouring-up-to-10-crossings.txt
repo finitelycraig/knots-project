@@ -1,0 +1,1372 @@
+-1 3 -2 1 -3 2 
+No solution found
+nodes: 23   cpu: 142
+1 -4 3 -1 2 -3 4 -2 
+No solution found
+nodes: 53   cpu: 133
+-1 4 -2 5 -3 1 -4 2 -5 3 
+No solution found
+nodes: 45   cpu: 121
+-1 5 -2 1 -3 4 -5 2 -4 3 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 5
+arc 3 colour 5
+arc 4 colour 0
+arc 5 colour 0
+arc 6 colour 3
+arc 7 colour 3
+arc 8 colour 6
+arc 9 colour 6
+nodes: 3   cpu: 7
+-1 4 -3 1 -5 6 -2 3 -4 2 -6 5 
+No solution found
+nodes: 85   cpu: 210
+-1 4 -3 1 -2 6 -5 3 -4 2 -6 5 
+No solution found
+nodes: 96   cpu: 155
+1 -6 2 -1 4 -5 6 -2 3 -4 5 -3 
+No solution found
+nodes: 97   cpu: 175
+-1 5 -2 6 -3 7 -4 1 -5 2 -6 3 -7 4 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 3
+arc 3 colour 3
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 2
+arc 9 colour 2
+arc 10 colour 4
+arc 11 colour 4
+arc 12 colour 6
+arc 13 colour 6
+nodes: 3   cpu: 7
+-1 7 -2 1 -3 6 -4 5 -7 2 -5 4 -6 3 
+No solution found
+nodes: 66   cpu: 154
+1 -6 2 -7 5 -1 3 -4 6 -2 7 -5 4 -3 
+No solution found
+nodes: 64   cpu: 122
+1 -5 6 -7 2 -1 3 -4 7 -6 5 -2 4 -3 
+No solution found
+nodes: 90   cpu: 167
+-1 7 -2 1 -3 5 -4 6 -7 2 -6 3 -5 4 
+No solution found
+nodes: 138   cpu: 143
+-1 7 -2 1 -3 6 -7 2 -4 5 -6 3 -5 4 
+No solution found
+nodes: 133   cpu: 101
+-1 4 -3 1 -2 7 -6 3 -4 2 -5 6 -7 5 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 3
+arc 3 colour 3
+arc 4 colour 0
+arc 5 colour 0
+arc 6 colour 5
+arc 7 colour 5
+arc 8 colour 2
+arc 9 colour 2
+arc 10 colour 0
+arc 11 colour 0
+arc 12 colour 6
+arc 13 colour 6
+nodes: 3   cpu: 4
+-1 4 -3 1 -5 8 -6 7 -2 3 -4 2 -7 6 -8 5 
+No solution found
+nodes: 108   cpu: 105
+-1 4 -3 1 -2 7 -5 8 -6 3 -4 2 -7 5 -8 6 
+No solution found
+nodes: 128   cpu: 132
+1 -6 4 -5 3 -1 7 -8 2 -3 5 -4 6 -2 8 -7 
+No solution found
+nodes: 192   cpu: 196
+1 -4 3 -7 5 -1 6 -8 2 -3 7 -5 4 -2 8 -6 
+No solution found
+nodes: 111   cpu: 68
+1 -3 2 -6 5 -1 3 -2 4 -8 7 -5 6 -4 8 -7 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 6
+arc 3 colour 6
+arc 4 colour 2
+arc 5 colour 2
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 5
+arc 9 colour 5
+arc 10 colour 0
+arc 11 colour 0
+arc 12 colour 4
+arc 13 colour 4
+arc 14 colour 6
+arc 15 colour 6
+nodes: 5   cpu: 4
+-1 4 -3 1 -5 7 -6 8 -2 3 -4 2 -8 5 -7 6 
+No solution found
+nodes: 82   cpu: 79
+-1 8 -2 1 -4 6 -5 7 -8 2 -3 4 -6 5 -7 3 
+No solution found
+nodes: 67   cpu: 105
+-1 8 -2 1 -4 5 -8 2 -6 7 -3 4 -5 3 -7 6 
+No solution found
+nodes: 67   cpu: 67
+1 -4 3 -6 5 -1 2 -8 7 -3 6 -5 4 -2 8 -7 
+No solution found
+nodes: 86   cpu: 79
+-1 8 -2 1 -4 5 -8 2 -3 7 -6 4 -5 3 -7 6 
+No solution found
+nodes: 116   cpu: 80
+-1 4 -3 1 -2 6 -7 8 -5 3 -4 2 -8 7 -6 5 
+No solution found
+nodes: 157   cpu: 65
+1 -4 3 -1 5 -8 2 -3 4 -2 6 -7 8 -5 7 -6 
+No solution found
+nodes: 168   cpu: 71
+-1 8 -2 1 -4 5 -6 7 -8 2 -3 4 -7 6 -5 3 
+No solution found
+nodes: 193   cpu: 86
+-1 4 -3 1 -2 8 -5 3 -4 2 -6 7 -8 5 -7 6 
+No solution found
+nodes: 127   cpu: 58
+-1 8 -2 1 -3 7 -8 2 -5 6 -7 3 -4 5 -6 4 
+No solution found
+nodes: 106   cpu: 48
+1 -8 5 -6 2 -1 4 -5 6 -7 3 -4 8 -2 7 -3 
+arc 0 colour 0
+arc 1 colour 0
+arc 2 colour 5
+arc 3 colour 5
+arc 4 colour 2
+arc 5 colour 2
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 3
+arc 9 colour 3
+arc 10 colour 1
+arc 11 colour 1
+arc 12 colour 6
+arc 13 colour 6
+arc 14 colour 0
+arc 15 colour 0
+nodes: 4   cpu: 3
+1 -4 3 -6 5 -1 2 -3 6 -8 7 -5 4 -2 8 -7 
+No solution found
+nodes: 199   cpu: 97
+1 -4 2 -5 6 -1 7 -2 8 -6 3 -7 4 -8 5 -3 
+No solution found
+nodes: 296   cpu: 124
+1 -8 2 -1 -4 5 8 -2 -3 7 -6 4 -5 3 -7 6 
+No solution found
+nodes: 190   cpu: 80
+1 -8 2 -1 -3 7 8 -2 -5 6 -7 3 -4 5 -6 4 
+No solution found
+nodes: 143   cpu: 59
+-1 8 -2 1 3 -7 -8 2 -5 6 7 -3 -4 5 -6 4 
+No solution found
+nodes: 146   cpu: 50
+-1 6 -2 7 -3 8 -4 9 -5 1 -6 2 -7 3 -8 4 -9 5 
+No solution found
+nodes: 102   cpu: 45
+-1 9 -2 1 -3 8 -4 7 -5 6 -9 2 -6 5 -7 4 -8 3 
+No solution found
+nodes: 78   cpu: 45
+1 -7 2 -8 5 -9 6 -1 3 -4 7 -2 8 -5 9 -6 4 -3 
+No solution found
+nodes: 85   cpu: 40
+-1 8 -2 9 -7 1 -3 6 -4 5 -8 2 -9 7 -5 4 -6 3 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 2
+arc 3 colour 2
+arc 4 colour 3
+arc 5 colour 3
+arc 6 colour 5
+arc 7 colour 5
+arc 8 colour 0
+arc 9 colour 0
+arc 10 colour 6
+arc 11 colour 6
+arc 12 colour 5
+arc 13 colour 5
+arc 14 colour 4
+arc 15 colour 4
+arc 16 colour 6
+arc 17 colour 6
+nodes: 3   cpu: 2
+1 -7 8 -9 2 -1 3 -6 4 -5 9 -8 7 -2 5 -4 6 -3 
+No solution found
+nodes: 151   cpu: 91
+-1 9 -2 1 -3 6 -4 7 -5 8 -9 2 -8 3 -6 4 -7 5 
+No solution found
+nodes: 314   cpu: 141
+-1 9 -2 1 -3 5 -4 8 -6 7 -9 2 -7 6 -8 3 -5 4 
+No solution found
+nodes: 105   cpu: 104
+-1 9 -2 1 -3 8 -9 2 -4 7 -5 6 -8 3 -6 5 -7 4 
+No solution found
+nodes: 62   cpu: 38
+-1 8 -2 9 -7 1 -3 5 -4 6 -8 2 -9 7 -6 3 -5 4 
+No solution found
+nodes: 140   cpu: 48
+1 -6 2 -7 8 -9 5 -1 3 -4 6 -2 9 -8 7 -5 4 -3 
+No solution found
+nodes: 186   cpu: 93
+-1 4 -3 1 -6 8 -7 9 -2 3 -4 2 -5 6 -8 7 -9 5 
+No solution found
+nodes: 111   cpu: 54
+-1 9 -2 1 -3 8 -6 7 -9 2 -4 5 -7 6 -8 3 -5 4 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 3
+arc 3 colour 3
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 6
+arc 9 colour 6
+arc 10 colour 4
+arc 11 colour 4
+arc 12 colour 2
+arc 13 colour 2
+arc 14 colour 3
+arc 15 colour 3
+arc 16 colour 6
+arc 17 colour 6
+nodes: 3   cpu: 3
+1 -7 8 -9 2 -1 3 -5 4 -6 9 -8 7 -2 6 -3 5 -4 
+No solution found
+nodes: 161   cpu: 84
+-1 4 -3 1 -2 9 -7 8 -6 3 -4 2 -5 6 -8 7 -9 5 
+No solution found
+nodes: 116   cpu: 62
+-1 4 -3 1 -6 7 -2 3 -4 2 -8 9 -5 6 -7 5 -9 8 
+No solution found
+nodes: 155   cpu: 73
+1 -9 2 -1 3 -5 4 -8 7 -6 9 -2 8 -7 6 -3 5 -4 
+No solution found
+nodes: 243   cpu: 77
+-1 4 -3 1 -2 6 -5 9 -8 3 -4 2 -6 5 -7 8 -9 7 
+No solution found
+nodes: 91   cpu: 47
+-1 9 -2 1 -3 5 -6 7 -4 8 -9 2 -8 3 -7 6 -5 4 
+No solution found
+nodes: 408   cpu: 138
+-1 4 -3 1 -2 7 -6 3 -4 2 -8 9 -5 6 -7 5 -9 8 
+No solution found
+nodes: 123   cpu: 52
+-1 9 -2 1 -3 6 -4 8 -9 2 -5 7 -8 3 -6 4 -7 5 
+No solution found
+nodes: 77   cpu: 55
+-1 4 -3 1 -6 7 -8 9 -2 3 -4 2 -5 6 -9 8 -7 5 
+No solution found
+nodes: 210   cpu: 82
+1 -4 3 -1 2 -7 6 -3 4 -2 5 -9 8 -6 7 -5 9 -8 
+No solution found
+nodes: 345   cpu: 175
+-1 9 -2 1 -3 7 -4 8 -9 2 -8 3 -5 6 -7 4 -6 5 
+No solution found
+nodes: 144   cpu: 79
+-1 9 -2 1 -3 8 -9 2 -4 6 -5 7 -8 3 -7 4 -6 5 
+No solution found
+nodes: 134   cpu: 61
+-1 9 -2 1 -3 8 -9 2 -4 7 -8 3 -5 6 -7 4 -6 5 
+No solution found
+nodes: 103   cpu: 87
+-1 4 -3 1 -2 7 -6 9 -8 3 -4 2 -5 6 -9 8 -7 5 
+No solution found
+nodes: 117   cpu: 51
+-1 9 -2 1 -4 7 -6 8 -9 2 -3 4 -5 6 -7 5 -8 3 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 4
+arc 3 colour 4
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 6
+arc 9 colour 6
+arc 10 colour 1
+arc 11 colour 1
+arc 12 colour 0
+arc 13 colour 0
+arc 14 colour 3
+arc 15 colour 3
+arc 16 colour 6
+arc 17 colour 6
+nodes: 3   cpu: 2
+-1 9 -2 1 -4 5 -9 2 -7 8 -3 4 -5 3 -6 7 -8 6 
+No solution found
+nodes: 195   cpu: 76
+1 -4 3 -7 5 -1 6 -9 7 -3 2 -8 9 -5 4 -2 8 -6 
+No solution found
+nodes: 283   cpu: 107
+1 -4 3 -1 2 -9 5 -3 4 -2 7 -8 9 -5 6 -7 8 -6 
+No solution found
+nodes: 144   cpu: 61
+-1 9 -2 1 -4 5 -6 8 -9 2 -3 4 -7 6 -8 7 -5 3 
+No solution found
+nodes: 92   cpu: 48
+-1 4 -3 1 -7 9 -5 3 -4 6 -8 7 -2 5 -6 8 -9 2 
+No solution found
+nodes: 165   cpu: 44
+1 -4 3 -1 6 -7 2 -3 4 -9 8 -2 5 -6 9 -8 7 -5 
+No solution found
+nodes: 190   cpu: 76
+1 -4 3 -7 6 -1 2 -3 5 -6 8 -9 7 -5 4 -2 9 -8 
+No solution found
+nodes: 411   cpu: 179
+-1 7 -8 9 -3 5 -2 1 -4 6 -9 8 -7 2 -5 3 -6 4 
+No solution found
+nodes: 207   cpu: 72
+-1 4 -3 1 -6 7 -2 3 -4 2 -5 9 -8 6 -7 5 -9 8 
+No solution found
+nodes: 111   cpu: 43
+-1 4 -3 1 -5 6 -2 9 -8 3 -4 2 -6 5 -7 8 -9 7 
+No solution found
+nodes: 139   cpu: 68
+-1 9 -5 6 -2 1 -3 4 -6 5 -8 7 -9 2 -4 8 -7 3 
+No solution found
+nodes: 251   cpu: 112
+-1 8 -2 7 -6 1 -3 9 -5 2 -8 4 -9 6 -7 5 -4 3 
+No solution found
+nodes: 279   cpu: 123
+-1 4 -6 7 -3 1 -2 8 -7 5 -4 2 -9 3 -5 6 -8 9 
+No solution found
+nodes: 334   cpu: 147
+1 -5 4 -6 3 -1 2 -7 8 -4 5 -2 9 -3 6 -8 7 -9 
+arc 0 colour 0
+arc 1 colour 0
+arc 2 colour 2
+arc 3 colour 2
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 0
+arc 9 colour 0
+arc 10 colour 3
+arc 11 colour 3
+arc 12 colour 1
+arc 13 colour 1
+arc 14 colour 6
+arc 15 colour 6
+arc 16 colour 0
+arc 17 colour 0
+nodes: 4   cpu: 2
+-1 4 -3 1 -2 -7 6 3 -4 2 5 -9 8 -6 7 -5 9 -8 
+arc 0 colour 2
+arc 1 colour 0
+arc 2 colour 0
+arc 3 colour 1
+arc 4 colour 1
+arc 5 colour 5
+arc 6 colour 4
+arc 7 colour 4
+arc 8 colour 4
+arc 9 colour 3
+arc 10 colour 3
+arc 11 colour 3
+arc 12 colour 0
+arc 13 colour 0
+arc 14 colour 1
+arc 15 colour 1
+arc 16 colour 5
+arc 17 colour 5
+nodes: 7   cpu: 6
+1 -4 3 -1 2 -9 5 -3 4 -2 -7 8 9 -5 -6 7 -8 6 
+No solution found
+nodes: 147   cpu: 71
+-1 4 -3 1 -2 -9 5 3 -4 2 7 -8 9 -5 6 -7 8 -6 
+No solution found
+nodes: 107   cpu: 34
+1 -4 3 -1 2 9 -5 -3 4 -2 7 -8 -9 5 6 -7 8 -6 
+No solution found
+nodes: 105   cpu: 54
+1 -4 3 -1 -5 6 -2 9 -8 -3 4 2 -6 5 -7 8 -9 7 
+No solution found
+nodes: 195   cpu: 81
+1 -4 3 -7 6 -1 2 -3 5 -6 -8 9 7 -5 4 -2 -9 8 
+No solution found
+nodes: 284   cpu: 107
+-1 4 -3 1 5 -6 2 9 -8 3 -4 -2 6 -5 -7 8 -9 7 
+No solution found
+nodes: 153   cpu: 73
+1 5 -4 6 -3 -1 2 7 -8 4 -5 -2 9 3 -6 8 -7 -9 
+No solution found
+nodes: 266   cpu: 110
+-1 4 -3 1 -5 10 -6 9 -7 8 -2 3 -4 2 -8 7 -9 6 -10 5 
+No solution found
+nodes: 94   cpu: 41
+-1 4 -3 1 -2 8 -5 9 -6 10 -7 3 -4 2 -8 5 -9 6 -10 7 
+No solution found
+nodes: 97   cpu: 50
+-1 6 -4 5 -3 1 -7 10 -8 9 -2 3 -5 4 -6 2 -9 8 -10 7 
+No solution found
+nodes: 131   cpu: 67
+1 -4 3 -8 5 -1 6 -10 7 -9 2 -3 8 -5 4 -2 9 -7 10 -6 
+No solution found
+nodes: 146   cpu: 62
+-1 10 -2 1 -4 7 -5 8 -6 9 -10 2 -3 4 -7 5 -8 6 -9 3 
+No solution found
+nodes: 133   cpu: 63
+-1 4 -3 1 -5 8 -6 9 -7 10 -2 3 -4 2 -10 5 -8 6 -9 7 
+No solution found
+nodes: 232   cpu: 94
+-1 4 -3 1 -2 6 -7 10 -8 9 -5 3 -4 2 -9 8 -10 7 -6 5 
+No solution found
+nodes: 274   cpu: 107
+-1 6 -4 5 -3 1 -2 9 -7 10 -8 3 -5 4 -6 2 -9 7 -10 8 
+No solution found
+nodes: 240   cpu: 83
+1 -4 3 -6 5 -1 2 -9 7 -10 8 -3 6 -5 4 -2 9 -7 10 -8 
+No solution found
+nodes: 123   cpu: 52
+-1 10 -2 1 -4 5 -6 9 -7 8 -10 2 -3 4 -8 7 -9 6 -5 3 
+No solution found
+nodes: 513   cpu: 177
+-1 6 -4 5 -3 1 -7 9 -8 10 -2 3 -5 4 -6 2 -10 7 -9 8 
+No solution found
+nodes: 70   cpu: 34
+-1 10 -2 1 -4 6 -5 7 -10 2 -8 9 -3 4 -6 5 -7 3 -9 8 
+No solution found
+nodes: 107   cpu: 52
+-1 4 -3 1 -5 10 -8 9 -2 3 -4 2 -6 7 -9 8 -10 5 -7 6 
+No solution found
+nodes: 38   cpu: 42
+-1 4 -3 1 -2 9 -5 10 -8 3 -4 2 -6 7 -9 5 -10 8 -7 6 
+No solution found
+nodes: 202   cpu: 71
+-1 10 -2 1 -6 8 -7 9 -3 4 -10 2 -4 3 -5 6 -8 7 -9 5 
+No solution found
+nodes: 329   cpu: 119
+1 -6 4 -5 3 -1 2 -8 9 -10 7 -3 5 -4 6 -2 10 -9 8 -7 
+No solution found
+nodes: 178   cpu: 79
+1 -9 2 -10 8 -1 4 -6 5 -7 9 -2 10 -8 3 -4 6 -5 7 -3 
+No solution found
+nodes: 328   cpu: 126
+-1 10 -2 1 -3 8 -6 7 -5 9 -10 2 -9 3 -4 5 -7 6 -8 4 
+No solution found
+nodes: 579   cpu: 206
+-1 9 -2 10 -8 1 -4 5 -6 7 -9 2 -10 8 -3 4 -7 6 -5 3 
+No solution found
+nodes: 232   cpu: 82
+-1 4 -3 1 -5 7 -6 10 -8 9 -2 3 -4 2 -9 8 -10 5 -7 6 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 3
+arc 3 colour 3
+arc 4 colour 2
+arc 5 colour 2
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 5
+arc 9 colour 5
+arc 10 colour 1
+arc 11 colour 1
+arc 12 colour 6
+arc 13 colour 6
+arc 14 colour 0
+arc 15 colour 0
+arc 16 colour 3
+arc 17 colour 3
+arc 18 colour 6
+arc 19 colour 6
+nodes: 5   cpu: 2
+-1 4 -3 1 -2 7 -5 8 -9 10 -6 3 -4 2 -7 5 -10 9 -8 6 
+No solution found
+nodes: 157   cpu: 60
+1 -4 3 -9 5 -1 6 -8 7 -10 2 -3 9 -5 4 -2 10 -6 8 -7 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 3
+arc 3 colour 3
+arc 4 colour 4
+arc 5 colour 4
+arc 6 colour 6
+arc 7 colour 6
+arc 8 colour 0
+arc 9 colour 0
+arc 10 colour 2
+arc 11 colour 2
+arc 12 colour 3
+arc 13 colour 3
+arc 14 colour 5
+arc 15 colour 5
+arc 16 colour 0
+arc 17 colour 0
+arc 18 colour 6
+arc 19 colour 6
+nodes: 3   cpu: 1
+-1 10 -2 1 -4 6 -5 7 -8 9 -10 2 -3 4 -6 5 -9 8 -7 3 
+No solution found
+nodes: 194   cpu: 93
+-1 4 -3 1 -5 7 -8 9 -6 10 -2 3 -4 2 -10 5 -9 8 -7 6 
+No solution found
+nodes: 268   cpu: 103
+-1 4 -3 1 -2 6 -8 9 -7 10 -5 3 -4 2 -10 8 -9 7 -6 5 
+No solution found
+nodes: 190   cpu: 78
+1 -4 3 -6 5 -1 2 -8 9 -10 7 -3 6 -5 4 -2 10 -9 8 -7 
+No solution found
+nodes: 147   cpu: 94
+1 -10 2 -1 4 -5 7 -8 6 -9 10 -2 3 -4 9 -7 8 -6 5 -3 
+No solution found
+nodes: 448   cpu: 229
+-1 10 -2 1 -4 5 -6 7 -10 2 -8 9 -3 4 -7 6 -5 3 -9 8 
+No solution found
+nodes: 416   cpu: 191
+-1 4 -3 1 -5 8 -6 10 -2 3 -4 2 -7 9 -10 5 -8 6 -9 7 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 0
+arc 3 colour 0
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 4
+arc 9 colour 4
+arc 10 colour 6
+arc 11 colour 6
+arc 12 colour 4
+arc 13 colour 4
+arc 14 colour 5
+arc 15 colour 5
+arc 16 colour 2
+arc 17 colour 2
+arc 18 colour 6
+arc 19 colour 6
+nodes: 5   cpu: 4
+-1 4 -3 1 -2 8 -9 10 -5 3 -4 2 -6 7 -10 9 -8 5 -7 6 
+No solution found
+nodes: 146   cpu: 83
+-1 10 -2 1 -6 7 -8 9 -3 4 -10 2 -4 3 -5 6 -9 8 -7 5 
+No solution found
+nodes: 145   cpu: 86
+-1 10 -2 1 -3 6 -5 8 -7 9 -10 2 -9 3 -4 5 -8 7 -6 4 
+No solution found
+nodes: 681   cpu: 226
+1 -8 9 -10 2 -1 4 -5 6 -7 10 -9 8 -2 3 -4 7 -6 5 -3 
+No solution found
+nodes: 305   cpu: 134
+-1 10 -2 1 -4 5 -10 2 -6 9 -7 8 -3 4 -5 3 -8 7 -9 6 
+No solution found
+nodes: 66   cpu: 31
+-1 4 -3 1 -5 10 -2 3 -4 2 -6 9 -7 8 -10 5 -8 7 -9 6 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 0
+arc 3 colour 0
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 3
+arc 7 colour 3
+arc 8 colour 2
+arc 9 colour 2
+arc 10 colour 4
+arc 11 colour 4
+arc 12 colour 6
+arc 13 colour 6
+arc 14 colour 4
+arc 15 colour 4
+arc 16 colour 5
+arc 17 colour 5
+arc 18 colour 6
+arc 19 colour 6
+nodes: 5   cpu: 2
+-1 4 -3 1 -2 10 -5 3 -4 2 -6 9 -7 8 -10 5 -8 7 -9 6 
+No solution found
+nodes: 174   cpu: 65
+1 -10 2 -1 6 -7 3 -4 10 -2 4 -3 8 -9 5 -6 7 -5 9 -8 
+No solution found
+nodes: 406   cpu: 140
+-1 10 -2 1 -3 6 -5 9 -10 2 -9 3 -7 8 -4 5 -6 4 -8 7 
+No solution found
+nodes: 146   cpu: 50
+-1 4 -3 1 -2 9 -5 10 -6 3 -4 2 -9 5 -7 8 -10 6 -8 7 
+No solution found
+nodes: 161   cpu: 75
+-1 10 -2 1 -4 8 -5 9 -10 2 -3 4 -8 7 -6 5 -9 6 -7 3 
+No solution found
+nodes: 92   cpu: 54
+-1 4 -3 1 -2 8 -9 7 -5 3 -4 2 -7 10 -6 9 -8 6 -10 5 
+No solution found
+nodes: 113   cpu: 60
+-1 10 -2 1 -4 7 -8 6 -10 2 -3 4 -6 9 -5 8 -7 5 -9 3 
+No solution found
+nodes: 92   cpu: 45
+1 -10 2 -1 8 -9 3 -6 10 -2 4 -5 6 -3 7 -8 9 -7 5 -4 
+No solution found
+nodes: 141   cpu: 91
+-1 4 -3 1 -2 10 -8 9 -6 3 -4 2 -5 6 -7 8 -9 7 -10 5 
+No solution found
+nodes: 259   cpu: 82
+1 -4 3 -1 2 -7 6 -10 9 -3 4 -2 5 -6 8 -9 10 -8 7 -5 
+No solution found
+nodes: 355   cpu: 156
+1 -3 2 -6 5 -1 3 -2 4 -9 7 -10 8 -5 6 -4 9 -7 10 -8 
+No solution found
+nodes: 184   cpu: 71
+-1 10 -2 1 -4 5 -10 2 -3 8 -6 9 -7 4 -5 3 -8 6 -9 7 
+No solution found
+nodes: 147   cpu: 56
+1 -9 2 -10 3 -1 9 -2 5 -7 6 -8 10 -3 4 -5 7 -6 8 -4 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 3
+arc 3 colour 3
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 4
+arc 7 colour 4
+arc 8 colour 5
+arc 9 colour 5
+arc 10 colour 0
+arc 11 colour 0
+arc 12 colour 1
+arc 13 colour 1
+arc 14 colour 2
+arc 15 colour 2
+arc 16 colour 4
+arc 17 colour 4
+arc 18 colour 6
+arc 19 colour 6
+nodes: 7   cpu: 4
+-1 10 -2 1 -3 9 -10 2 -5 7 -6 8 -9 3 -4 5 -7 6 -8 4 
+No solution found
+nodes: 150   cpu: 55
+1 -3 2 -6 5 -1 3 -2 4 -8 9 -10 7 -5 6 -4 10 -9 8 -7 
+No solution found
+nodes: 155   cpu: 71
+-1 10 -2 1 -4 5 -10 2 -3 7 -8 9 -6 4 -5 3 -9 8 -7 6 
+No solution found
+nodes: 143   cpu: 77
+1 -9 2 -10 3 -1 9 -2 5 -6 7 -8 10 -3 4 -5 8 -7 6 -4 
+No solution found
+nodes: 205   cpu: 124
+-1 10 -2 1 -3 9 -10 2 -5 6 -7 8 -9 3 -4 5 -8 7 -6 4 
+No solution found
+nodes: 215   cpu: 68
+-1 10 -2 1 -6 7 -3 4 -10 2 -4 3 -5 9 -8 6 -7 5 -9 8 
+No solution found
+nodes: 240   cpu: 110
+-1 10 -2 1 -3 9 -10 2 -5 6 -9 3 -7 8 -4 5 -6 4 -8 7 
+No solution found
+nodes: 75   cpu: 37
+1 -10 2 -1 3 -6 5 -9 10 -2 9 -3 4 -8 7 -5 6 -4 8 -7 
+No solution found
+nodes: 595   cpu: 202
+-1 10 -2 1 -4 5 -10 2 -3 9 -6 4 -5 3 -7 8 -9 6 -8 7 
+No solution found
+nodes: 90   cpu: 37
+-1 4 -3 1 -5 10 -2 3 -4 2 -6 9 -10 5 -7 8 -9 6 -8 7 
+No solution found
+nodes: 128   cpu: 43
+1 -4 3 -1 2 -10 5 -3 4 -2 6 -9 10 -5 7 -8 9 -6 8 -7 
+No solution found
+nodes: 211   cpu: 103
+1 -4 3 -1 2 -7 6 -3 4 -2 5 -10 9 -6 7 -5 8 -9 10 -8 
+No solution found
+nodes: 341   cpu: 99
+1 -3 2 -8 6 -7 5 -1 3 -2 4 -10 9 -5 7 -6 8 -4 10 -9 
+No solution found
+nodes: 184   cpu: 72
+-1 10 -2 1 -4 6 -5 7 -10 2 -3 9 -8 4 -6 5 -7 3 -9 8 
+No solution found
+nodes: 292   cpu: 110
+-1 10 -2 1 -3 9 -7 8 -10 2 -5 6 -8 7 -9 3 -4 5 -6 4 
+No solution found
+nodes: 270   cpu: 98
+1 -3 2 -6 5 -8 7 -1 3 -2 4 -10 9 -5 8 -7 6 -4 10 -9 
+No solution found
+nodes: 197   cpu: 77
+-1 10 -2 1 -4 5 -6 7 -10 2 -3 9 -8 4 -7 6 -5 3 -9 8 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 0
+arc 3 colour 0
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 2
+arc 9 colour 2
+arc 10 colour 4
+arc 11 colour 4
+arc 12 colour 6
+arc 13 colour 6
+arc 14 colour 1
+arc 15 colour 1
+arc 16 colour 3
+arc 17 colour 3
+arc 18 colour 6
+arc 19 colour 6
+nodes: 6   cpu: 3
+-1 10 -2 1 -3 5 -4 9 -10 2 -7 8 -9 3 -5 4 -6 7 -8 6 
+No solution found
+nodes: 296   cpu: 107
+-1 4 -3 1 -5 6 -2 10 -7 3 -4 2 -6 5 -8 9 -10 7 -9 8 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 2
+arc 3 colour 2
+arc 4 colour 1
+arc 5 colour 1
+arc 6 colour 5
+arc 7 colour 5
+arc 8 colour 0
+arc 9 colour 0
+arc 10 colour 3
+arc 11 colour 3
+arc 12 colour 5
+arc 13 colour 5
+arc 14 colour 4
+arc 15 colour 4
+arc 16 colour 5
+arc 17 colour 5
+arc 18 colour 6
+arc 19 colour 6
+nodes: 6   cpu: 3
+1 -10 2 -1 4 -9 8 -5 6 -7 10 -2 3 -8 9 -4 7 -6 5 -3 
+No solution found
+nodes: 196   cpu: 80
+-1 4 -3 1 -6 7 -2 10 -9 3 -4 2 -5 6 -7 5 -8 9 -10 8 
+No solution found
+nodes: 253   cpu: 99
+-1 4 -3 1 -5 10 -2 3 -4 2 -6 8 -7 9 -10 5 -9 6 -8 7 
+No solution found
+nodes: 229   cpu: 71
+-1 10 -2 1 -4 5 -10 2 -6 9 -3 4 -5 3 -7 8 -9 6 -8 7 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 5
+arc 3 colour 5
+arc 4 colour 0
+arc 5 colour 0
+arc 6 colour 4
+arc 7 colour 4
+arc 8 colour 3
+arc 9 colour 3
+arc 10 colour 0
+arc 11 colour 0
+arc 12 colour 6
+arc 13 colour 6
+arc 14 colour 2
+arc 15 colour 2
+arc 16 colour 3
+arc 17 colour 3
+arc 18 colour 6
+arc 19 colour 6
+nodes: 4   cpu: 2
+1 -4 3 -1 2 -10 5 -3 4 -2 6 -8 7 -9 10 -5 9 -6 8 -7 
+No solution found
+nodes: 161   cpu: 69
+1 -4 3 -1 2 -7 6 -3 4 -2 9 -10 5 -6 7 -5 8 -9 10 -8 
+No solution found
+nodes: 210   cpu: 57
+-1 4 -3 1 -2 8 -9 10 -6 7 -5 3 -4 2 -10 9 -8 5 -7 6 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 3
+arc 3 colour 3
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 2
+arc 9 colour 2
+arc 10 colour 0
+arc 11 colour 0
+arc 12 colour 4
+arc 13 colour 4
+arc 14 colour 2
+arc 15 colour 2
+arc 16 colour 1
+arc 17 colour 1
+arc 18 colour 6
+arc 19 colour 6
+nodes: 5   cpu: 3
+-1 4 -3 1 -2 7 -6 10 -9 3 -4 2 -5 6 -7 5 -8 9 -10 8 
+No solution found
+nodes: 268   cpu: 110
+1 -4 3 -1 5 -7 6 -8 2 -10 9 -3 4 -2 10 -9 8 -5 7 -6 
+No solution found
+nodes: 217   cpu: 73
+-1 10 -2 1 -4 5 -10 2 -6 8 -7 9 -3 4 -5 3 -9 6 -8 7 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 5
+arc 3 colour 5
+arc 4 colour 0
+arc 5 colour 0
+arc 6 colour 2
+arc 7 colour 2
+arc 8 colour 4
+arc 9 colour 4
+arc 10 colour 3
+arc 11 colour 3
+arc 12 colour 0
+arc 13 colour 0
+arc 14 colour 1
+arc 15 colour 1
+arc 16 colour 3
+arc 17 colour 3
+arc 18 colour 6
+arc 19 colour 6
+nodes: 4   cpu: 2
+-1 10 -2 1 -3 9 -10 2 -7 8 -4 5 -9 3 -5 4 -6 7 -8 6 
+No solution found
+nodes: 122   cpu: 44
+1 -9 2 -10 3 -1 9 -2 5 -6 10 -3 4 -8 7 -5 6 -4 8 -7 
+No solution found
+nodes: 380   cpu: 170
+-1 10 -2 1 -3 9 -10 2 -5 6 -9 3 -4 8 -7 5 -6 4 -8 7 
+No solution found
+nodes: 231   cpu: 77
+1 -10 2 -1 3 -9 10 -2 4 -8 9 -3 6 -7 8 -4 5 -6 7 -5 
+No solution found
+nodes: 177   cpu: 54
+-1 4 -3 6 -5 1 -2 3 -6 9 -7 10 -8 5 -4 2 -9 7 -10 8 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 3
+arc 3 colour 3
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 2
+arc 9 colour 2
+arc 10 colour 1
+arc 11 colour 1
+arc 12 colour 1
+arc 13 colour 1
+arc 14 colour 5
+arc 15 colour 5
+arc 16 colour 4
+arc 17 colour 4
+arc 18 colour 6
+arc 19 colour 6
+nodes: 19   cpu: 5
+-1 10 -5 6 -2 1 -4 5 -6 7 -8 9 -3 4 -10 2 -9 8 -7 3 
+No solution found
+nodes: 210   cpu: 72
+1 -10 2 -1 5 -9 7 -3 10 -2 3 -6 8 -7 4 -5 6 -8 9 -4 
+No solution found
+nodes: 262   cpu: 81
+1 -10 5 -6 2 -1 4 -5 6 -8 3 -9 7 -4 10 -2 8 -3 9 -7 
+No solution found
+nodes: 245   cpu: 69
+1 -4 3 -6 5 -1 2 -3 6 -8 9 -10 7 -5 4 -2 10 -9 8 -7 
+No solution found
+nodes: 336   cpu: 124
+1 -10 2 -1 3 -6 5 -7 10 -2 7 -9 8 -3 4 -5 9 -8 6 -4 
+No solution found
+nodes: 415   cpu: 168
+1 -4 3 -1 7 -10 5 -3 4 -8 9 -7 2 -5 6 -9 8 -6 10 -2 
+No solution found
+nodes: 343   cpu: 127
+1 -4 3 -1 6 -7 2 -3 4 -10 9 -2 5 -6 8 -9 10 -8 7 -5 
+No solution found
+nodes: 270   cpu: 91
+1 -2 8 -10 4 -1 2 -7 9 -8 5 -6 3 -4 7 -9 10 -3 6 -5 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 3
+arc 3 colour 3
+arc 4 colour 1
+arc 5 colour 1
+arc 6 colour 4
+arc 7 colour 4
+arc 8 colour 2
+arc 9 colour 2
+arc 10 colour 0
+arc 11 colour 0
+arc 12 colour 2
+arc 13 colour 2
+arc 14 colour 0
+arc 15 colour 0
+arc 16 colour 1
+arc 17 colour 1
+arc 18 colour 6
+arc 19 colour 6
+nodes: 6   cpu: 3
+1 -5 4 -10 2 -1 6 -7 3 -4 9 -8 10 -6 7 -3 5 -9 8 -2 
+No solution found
+nodes: 288   cpu: 98
+1 -10 2 -1 3 -8 6 -9 10 -2 5 -7 9 -3 4 -5 7 -6 8 -4 
+No solution found
+nodes: 283   cpu: 106
+1 -10 6 -7 2 -1 3 -9 5 -6 7 -8 4 -5 10 -2 8 -4 9 -3 
+No solution found
+nodes: 386   cpu: 107
+1 -2 7 -9 4 -1 2 -6 8 -7 3 -10 5 -4 6 -8 9 -3 10 -5 
+No solution found
+nodes: 464   cpu: 178
+-1 10 -2 1 -6 5 -7 4 -10 2 -3 9 -8 6 -4 3 -9 7 -5 8 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 6
+arc 3 colour 6
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 6
+arc 9 colour 6
+arc 10 colour 0
+arc 11 colour 0
+arc 12 colour 3
+arc 13 colour 3
+arc 14 colour 2
+arc 15 colour 2
+arc 16 colour 3
+arc 17 colour 3
+arc 18 colour 6
+arc 19 colour 6
+nodes: 5   cpu: 3
+-1 4 -3 1 -2 7 -6 3 -4 8 -5 6 -9 10 -7 5 -8 2 -10 9 
+No solution found
+nodes: 274   cpu: 117
+1 -4 3 -1 2 -10 7 -3 4 -6 5 -2 8 -9 10 -5 6 -7 9 -8 
+No solution found
+nodes: 339   cpu: 114
+-1 5 -2 8 -7 1 -3 4 -5 2 -6 10 -9 7 -8 6 -4 3 -10 9 
+No solution found
+nodes: 508   cpu: 190
+1 -9 2 -10 8 -1 4 -5 9 -2 3 -7 6 -4 5 -3 10 -8 7 -6 
+No solution found
+nodes: 434   cpu: 175
+1 -10 5 -7 2 -1 4 -8 6 -5 7 -9 3 -4 8 -6 10 -2 9 -3 
+No solution found
+nodes: 392   cpu: 144
+1 -10 2 -1 3 -8 7 -9 10 -2 5 -6 8 -3 4 -5 9 -7 6 -4 
+No solution found
+nodes: 353   cpu: 122
+1 -4 3 -7 5 -1 6 -8 2 -3 7 -10 9 -5 4 -2 8 -6 10 -9 
+No solution found
+nodes: 210   cpu: 81
+1 -10 5 -6 2 -1 4 -8 7 -5 6 -9 3 -7 8 -4 10 -2 9 -3 
+No solution found
+nodes: 262   cpu: 107
+1 -10 2 -9 8 -1 4 -6 3 -7 9 -8 5 -4 10 -2 6 -3 7 -5 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 1
+arc 3 colour 1
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 2
+arc 9 colour 2
+arc 10 colour 1
+arc 11 colour 1
+arc 12 colour 1
+arc 13 colour 1
+arc 14 colour 1
+arc 15 colour 1
+arc 16 colour 3
+arc 17 colour 3
+arc 18 colour 6
+arc 19 colour 6
+nodes: 28   cpu: 7
+1 -10 2 -1 4 -5 3 -8 7 -6 10 -2 8 -9 5 -4 6 -7 9 -3 
+arc 0 colour 0
+arc 1 colour 0
+arc 2 colour 4
+arc 3 colour 4
+arc 4 colour 3
+arc 5 colour 3
+arc 6 colour 2
+arc 7 colour 2
+arc 8 colour 0
+arc 9 colour 0
+arc 10 colour 0
+arc 11 colour 0
+arc 12 colour 0
+arc 13 colour 0
+arc 14 colour 1
+arc 15 colour 1
+arc 16 colour 6
+arc 17 colour 6
+arc 18 colour 0
+arc 19 colour 0
+nodes: 4   cpu: 2
+1 -4 3 -6 5 -1 2 -9 7 -3 6 -10 8 -5 4 -2 9 -7 10 -8 
+No solution found
+nodes: 215   cpu: 80
+-1 10 -2 1 -6 5 -3 8 -4 7 -10 2 -8 3 -9 6 -7 4 -5 9 
+No solution found
+nodes: 569   cpu: 188
+1 -10 2 -9 8 -1 4 -5 6 -7 9 -8 3 -4 10 -2 7 -6 5 -3 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 1
+arc 3 colour 1
+arc 4 colour 5
+arc 5 colour 5
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 2
+arc 9 colour 2
+arc 10 colour 1
+arc 11 colour 1
+arc 12 colour 1
+arc 13 colour 1
+arc 14 colour 1
+arc 15 colour 1
+arc 16 colour 3
+arc 17 colour 3
+arc 18 colour 6
+arc 19 colour 6
+nodes: 6   cpu: 3
+1 -9 2 -10 8 -1 4 -5 9 -2 3 -7 10 -8 6 -4 5 -3 7 -6 
+No solution found
+nodes: 476   cpu: 191
+-1 7 -3 8 -4 1 -2 5 -6 3 -7 10 -9 6 -8 4 -5 9 -10 2 
+No solution found
+nodes: 447   cpu: 187
+1 -5 2 -8 7 -1 3 -4 5 -2 6 -10 4 -3 9 -7 8 -6 10 -9 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 6
+arc 3 colour 6
+arc 4 colour 2
+arc 5 colour 2
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 0
+arc 9 colour 0
+arc 10 colour 5
+arc 11 colour 5
+arc 12 colour 0
+arc 13 colour 0
+arc 14 colour 0
+arc 15 colour 0
+arc 16 colour 4
+arc 17 colour 4
+arc 18 colour 6
+arc 19 colour 6
+nodes: 22   cpu: 12
+1 -5 2 -6 8 -1 9 -2 10 -8 3 -7 4 -9 5 -10 6 -3 7 -4 
+No solution found
+nodes: 519   cpu: 204
+1 -10 2 -1 3 -7 5 -6 10 -2 8 -5 9 -3 4 -8 6 -9 7 -4 
+No solution found
+nodes: 503   cpu: 182
+1 -6 2 -7 8 -1 9 -2 10 -8 4 -5 3 -9 6 -10 7 -3 5 -4 
+No solution found
+nodes: 378   cpu: 136
+1 -10 7 -8 2 -1 4 -5 8 -7 6 -9 10 -2 3 -4 9 -6 5 -3 
+No solution found
+nodes: 468   cpu: 192
+1 -9 2 -10 6 -1 3 -4 9 -5 10 -8 7 -3 4 -2 5 -6 8 -7 
+No solution found
+nodes: 518   cpu: 209
+-1 10 -6 7 -2 1 -4 5 -8 6 -7 9 -3 4 -10 2 -9 8 -5 3 
+No solution found
+nodes: 440   cpu: 157
+1 -7 6 -10 2 -1 5 -6 9 -8 10 -4 3 -5 7 -9 8 -2 4 -3 
+No solution found
+nodes: 392   cpu: 146
+-1 4 -3 8 -5 1 -2 3 -6 7 -8 10 -9 5 -7 6 -4 2 -10 9 
+No solution found
+nodes: 396   cpu: 142
+-1 10 -5 7 -2 1 -6 8 -7 5 -4 6 -3 9 -8 4 -10 2 -9 3 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 3
+arc 3 colour 3
+arc 4 colour 2
+arc 5 colour 2
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 6
+arc 9 colour 6
+arc 10 colour 1
+arc 11 colour 1
+arc 12 colour 3
+arc 13 colour 3
+arc 14 colour 2
+arc 15 colour 2
+arc 16 colour 0
+arc 17 colour 0
+arc 18 colour 6
+arc 19 colour 6
+nodes: 14   cpu: 6
+-1 10 -4 5 -6 1 -2 9 -3 4 -7 6 -9 8 -10 7 -5 3 -8 2 
+No solution found
+nodes: 430   cpu: 166
+-1 3 -6 7 -4 1 -2 8 -5 6 -9 4 -10 2 -3 9 -7 5 -8 10 
+arc 0 colour 0
+arc 1 colour 0
+arc 2 colour 5
+arc 3 colour 5
+arc 4 colour 0
+arc 5 colour 0
+arc 6 colour 2
+arc 7 colour 2
+arc 8 colour 6
+arc 9 colour 6
+arc 10 colour 6
+arc 11 colour 6
+arc 12 colour 1
+arc 13 colour 1
+arc 14 colour 6
+arc 15 colour 6
+arc 16 colour 4
+arc 17 colour 4
+arc 18 colour 0
+arc 19 colour 0
+nodes: 4   cpu: 2
+1 -6 2 -4 3 -10 9 -1 7 -2 5 -3 8 -9 6 -7 4 -5 10 -8 
+No solution found
+nodes: 647   cpu: 243
+1 -10 2 -1 -4 5 10 -2 -3 8 -6 9 -7 4 -5 3 -8 6 -9 7 
+No solution found
+nodes: 209   cpu: 69
+-1 10 -2 1 -3 9 -10 2 5 -7 6 -8 -9 3 4 -5 7 -6 8 -4 
+No solution found
+nodes: 126   cpu: 38
+1 -10 2 -1 -3 9 10 -2 -5 7 -6 8 -9 3 -4 5 -7 6 -8 4 
+No solution found
+nodes: 199   cpu: 72
+-1 10 -2 1 3 -9 -10 2 -5 7 -6 8 9 -3 -4 5 -7 6 -8 4 
+No solution found
+nodes: 198   cpu: 65
+1 -10 2 -1 -4 5 10 -2 -3 7 -8 9 -6 4 -5 3 -9 8 -7 6 
+No solution found
+nodes: 248   cpu: 72
+-1 10 -2 1 -3 9 -10 2 5 -6 7 -8 -9 3 4 -5 8 -7 6 -4 
+No solution found
+nodes: 126   cpu: 35
+1 -10 2 -1 -3 9 10 -2 -5 6 -7 8 -9 3 -4 5 -8 7 -6 4 
+No solution found
+nodes: 261   cpu: 81
+-1 10 -2 1 3 -9 -10 2 -5 6 -7 8 9 -3 -4 5 -8 7 -6 4 
+No solution found
+nodes: 183   cpu: 65
+1 -10 2 -1 -3 9 10 -2 -5 6 -9 3 -7 8 -4 5 -6 4 -8 7 
+No solution found
+nodes: 232   cpu: 82
+-1 10 -2 1 -4 5 -10 2 3 -9 6 4 -5 -3 7 -8 9 -6 8 -7 
+No solution found
+nodes: 118   cpu: 34
+1 -10 2 -1 -4 5 10 -2 -3 9 -6 4 -5 3 -7 8 -9 6 -8 7 
+No solution found
+nodes: 351   cpu: 146
+-1 10 -2 1 4 -5 -10 2 -3 9 -6 -4 5 3 -7 8 -9 6 -8 7 
+No solution found
+nodes: 301   cpu: 99
+-1 4 -3 1 -2 -10 5 3 -4 2 6 -9 10 -5 7 -8 9 -6 8 -7 
+No solution found
+nodes: 163   cpu: 50
+-1 4 -3 1 -2 -7 6 3 -4 2 5 -10 9 -6 7 -5 8 -9 10 -8 
+No solution found
+nodes: 388   cpu: 140
+1 -4 3 -1 2 7 -6 -3 4 -2 5 -10 9 6 -7 -5 8 -9 10 -8 
+arc 0 colour 1
+arc 1 colour 1
+arc 2 colour 2
+arc 3 colour 2
+arc 4 colour 0
+arc 5 colour 0
+arc 6 colour 0
+arc 7 colour 6
+arc 8 colour 5
+arc 9 colour 5
+arc 10 colour 2
+arc 11 colour 2
+arc 12 colour 3
+arc 13 colour 3
+arc 14 colour 3
+arc 15 colour 4
+arc 16 colour 0
+arc 17 colour 0
+arc 18 colour 6
+arc 19 colour 6
+nodes: 13   cpu: 4
+1 -10 2 -1 -4 6 -5 7 10 -2 -3 9 -8 4 -6 5 -7 3 -9 8 
+No solution found
+nodes: 217   cpu: 85
+-1 10 -2 1 4 -5 6 -7 -10 2 -3 9 -8 -4 7 -6 5 3 -9 8 
+No solution found
+nodes: 262   cpu: 100
+-1 10 -2 1 3 -5 4 -9 -10 2 -7 8 9 -3 5 -4 -6 7 -8 6 
+arc 0 colour 5
+arc 1 colour 5
+arc 2 colour 5
+arc 3 colour 2
+arc 4 colour 2
+arc 5 colour 4
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 3
+arc 9 colour 3
+arc 10 colour 3
+arc 11 colour 0
+arc 12 colour 0
+arc 13 colour 4
+arc 14 colour 5
+arc 15 colour 5
+arc 16 colour 1
+arc 17 colour 1
+arc 18 colour 2
+arc 19 colour 2
+nodes: 7   cpu: 4
+1 -10 2 -1 -4 5 -6 7 10 -2 -3 9 -8 4 -7 6 -5 3 -9 8 
+No solution found
+nodes: 311   cpu: 118
+1 -10 2 -1 -3 5 -4 9 10 -2 -7 8 -9 3 -5 4 -6 7 -8 6 
+No solution found
+nodes: 250   cpu: 96
+-1 10 -2 1 -4 5 -6 7 -10 2 3 -9 8 4 -7 6 -5 -3 9 -8 
+No solution found
+nodes: 285   cpu: 90
+1 -4 3 -1 -2 10 -7 -3 4 6 -5 2 -8 9 -10 5 -6 7 -9 8 
+No solution found
+nodes: 305   cpu: 103
+1 -4 3 -1 -2 7 -6 -3 4 8 -5 6 -9 10 -7 5 -8 2 -10 9 
+No solution found
+nodes: 288   cpu: 135
+1 -10 2 -1 -3 7 5 -6 10 -2 8 -5 9 3 -4 -8 6 -9 -7 4 
+No solution found
+nodes: 432   cpu: 165
+1 -10 2 -1 -3 9 10 -2 -5 6 -9 3 -4 8 -7 5 -6 4 -8 7 
+No solution found
+nodes: 243   cpu: 97
+-1 10 -2 1 3 -9 -10 2 -5 6 9 -3 -4 8 -7 5 -6 4 -8 7 
+No solution found
+nodes: 296   cpu: 96
+1 -10 2 -1 -3 9 10 -2 -4 8 -9 3 -6 7 -8 4 -5 6 -7 5 
+No solution found
+nodes: 279   cpu: 87
+-1 10 -2 1 3 -9 -10 2 -4 8 9 -3 -6 7 -8 4 -5 6 -7 5 
+No solution found
+nodes: 256   cpu: 70
+-1 9 -2 10 -3 1 -9 2 5 -6 -10 3 4 -8 7 -5 6 -4 8 -7 
+No solution found
+nodes: 235   cpu: 71
+1 -10 2 -1 3 -9 10 -2 -5 6 9 -3 -4 8 -7 5 -6 4 -8 7 
+No solution found
+nodes: 169   cpu: 56
+1 -10 2 -1 3 -9 10 -2 -4 8 9 -3 -6 7 -8 4 -5 6 -7 5 
+No solution found
+nodes: 190   cpu: 59
+-1 4 -3 6 -5 1 -2 9 -7 3 -6 -10 8 5 -4 2 -9 7 10 -8 
+No solution found
+nodes: 347   cpu: 131
+1 -10 2 -1 6 -5 -3 8 4 -7 10 -2 -8 3 9 -6 7 -4 5 -9 
+arc 0 colour 3
+arc 1 colour 1
+arc 2 colour 1
+arc 3 colour 1
+arc 4 colour 3
+arc 5 colour 3
+arc 6 colour 1
+arc 7 colour 1
+arc 8 colour 1
+arc 9 colour 1
+arc 10 colour 0
+arc 11 colour 0
+arc 12 colour 2
+arc 13 colour 2
+arc 14 colour 0
+arc 15 colour 2
+arc 16 colour 2
+arc 17 colour 2
+arc 18 colour 4
+arc 19 colour 4
+nodes: 12   cpu: 7
+-1 -9 2 -10 8 1 -4 5 9 -2 3 7 -6 4 -5 -3 10 -8 -7 6 
+arc 0 colour 0
+arc 1 colour 0
+arc 2 colour 0
+arc 3 colour 2
+arc 4 colour 3
+arc 5 colour 3
+arc 6 colour 1
+arc 7 colour 1
+arc 8 colour 1
+arc 9 colour 6
+arc 10 colour 6
+arc 11 colour 6
+arc 12 colour 0
+arc 13 colour 0
+arc 14 colour 0
+arc 15 colour 0
+arc 16 colour 0
+arc 17 colour 5
+arc 18 colour 2
+arc 19 colour 2
+nodes: 4   cpu: 2
+1 5 -2 8 -7 -1 3 -4 -5 2 -6 10 4 -3 9 7 -8 6 -10 -9 
+No solution found
+nodes: 368   cpu: 145
+-1 5 -2 6 -8 1 -9 2 -10 8 3 -7 4 9 -5 10 -6 -3 7 -4 
+No solution found
+nodes: 344   cpu: 132
+1 -10 2 -1 -6 5 -3 8 -4 7 10 -2 -8 3 -9 6 -7 4 -5 9 
+arc 0 colour 6
+arc 1 colour 3
+arc 2 colour 3
+arc 3 colour 1
+arc 4 colour 1
+arc 5 colour 1
+arc 6 colour 1
+arc 7 colour 2
+arc 8 colour 2
+arc 9 colour 2
+arc 10 colour 0
+arc 11 colour 0
+arc 12 colour 4
+arc 13 colour 5
+arc 14 colour 5
+arc 15 colour 1
+arc 16 colour 1
+arc 17 colour 1
+arc 18 colour 1
+arc 19 colour 1
+nodes: 35   cpu: 12
+-1 10 -2 1 6 -5 -3 8 4 -7 -10 2 -8 3 9 -6 7 -4 5 -9 
+No solution found
+nodes: 240   cpu: 110
+1 -4 3 -7 5 -1 6 -8 2 -3 7 10 -9 -5 4 -2 8 -6 -10 9 
+arc 0 colour 6
+arc 1 colour 1
+arc 2 colour 1
+arc 3 colour 5
+arc 4 colour 5
+arc 5 colour 2
+arc 6 colour 0
+arc 7 colour 0
+arc 8 colour 0
+arc 9 colour 2
+arc 10 colour 2
+arc 11 colour 0
+arc 12 colour 0
+arc 13 colour 0
+arc 14 colour 0
+arc 15 colour 3
+arc 16 colour 3
+arc 17 colour 1
+arc 18 colour 1
+arc 19 colour 1
+nodes: 7   cpu: 4
+1 -6 2 -7 8 -1 9 -2 10 -8 -4 5 -3 -9 6 -10 7 3 -5 4 
+No solution found
+nodes: 488   cpu: 200
+1 3 -6 7 -4 -1 2 8 -5 6 -9 4 10 -2 -3 9 -7 5 -8 -10 
+No solution found
+nodes: 381   cpu: 156
+-1 4 -3 8 -5 1 -2 3 -6 7 -8 -10 9 5 -7 6 -4 2 10 -9 
+No solution found
+nodes: 225   cpu: 99
