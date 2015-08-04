@@ -23,7 +23,7 @@ public class AdjSetKnot implements Knot
 
 		// TODO maybe set size to minus 1, since the trivial knot will have size 0
 		// but all knots uwith size 1 or 2 are trivial
-		size = 0  ;
+		size = 0;
 	}
 
     // public AdjSetKnot(int[] gaussCode)

@@ -73,8 +73,8 @@ public static final String ANSI_WHITE = "\u001B[37m";
     	solutions[1] = 0;
     	solutions[2] = pColours;
 
-    	model           = new CPModel();
-        solver          = new CPSolver();
+    	model = new CPModel();
+        solver = new CPSolver();
 
     }
 
@@ -91,45 +91,10 @@ public static final String ANSI_WHITE = "\u001B[37m";
     	Knot.Arc[] outArcs = new Knot.Arc[2]; 
     	colouringPositions = new ColouringList(knot);
 
-
-    	//get the positions of the arcs in the walk associated with the crossings
-
-    	// while(walk.hasNext())
-    	// {
-    	// 	crossing = (Knot.Crossing) walk.next();
-    	// 	outArcs = crossing.getOutArcs();
-    	// 	crossingNum = crossing.getOrderAdded();
-    	// 	incomingOrient = walk.getIncomingArcOrient();
-
-    	// 	if (incomingOrient == Knot.OVER) //add to the front of the dq for the crossingNum
-    	// 	{
-    	// 		colouringPositions[crossingNum].addFirst(i);
-    	// 	}
-    	// 	else
-    	// 	{
-    	// 		colouringPositions[crossingNum].addLast(i);
-    	// 	}
-
-    	// 	target = outArcs[incomingOrient].getTarget();
-    	// 	targetNum = target.getOrderAdded();
-    	// 	targetOrient = outArcs[incomingOrient].getTargetOrientation();
-
-    	// 	if (targetOrient == Knot.OVER)
-    	// 	{
-    	// 		colouringPositions[targetNum].addFirst(i);
-    	// 	}
-    	// 	else
-    	// 	{
-    	// 		colouringPositions[targetNum].addLast(i);
-    	// 	}
-
-    	// 	i++;
-
-	    // 	// then 2x - y - z = 0 (mod p), where x is the number on the over crossings and y and z are the unders
-     // 	}
-
     	// System.out.println("Trying to colour a knot of size " + numOfCrossings + " with " + numOfArcs + " arcs.");
 
+    	// get the positions of the arcs in the walk associated with the crossings and add them to the stacks associated
+    	// with the crossings in the colouringPosistions
     	while(walk.hasNext())
     	{
     		crossing = (Knot.Crossing) walk.next();
@@ -139,44 +104,46 @@ public static final String ANSI_WHITE = "\u001B[37m";
 
     		// System.out.println("Incoming orientation in Colourist: " + incomingOrient);
 
-    		if (incomingOrient == Knot.OVER) //add to the front of the dq for the crossingNum
+    		//if the incoming orientation of the ith arc is is over then add i to the over stack for this crossing
+    		if (incomingOrient == Knot.OVER)
     		{
+    			colouringPositions.pushOver(crossingNum, i);
     			// System.out.println("Colourist pushing over.");
     			// System.out.println("pushed over " + i + " to crossing " + crossingNum);
-    			colouringPositions.pushOver(crossingNum, i);
+
     		}
-    		else
+    		else // if the incoming orientation is under, then add i to the under stack for this crossing
     		{
-    			// System.out.println("pushed under " + i + " to crossing " + crossingNum);
     			colouringPositions.pushUnder(crossingNum, i);
+    			// System.out.println("pushed under " + i + " to crossing " + crossingNum);
     		}
 
+    		// retrieve the target crossing of this arc, the number associated with the target
+    		// and the arc's orientation at the target
     		target = outArcs[incomingOrient].getTarget();
     		targetNum = target.getOrderAdded();
     		targetOrient = outArcs[incomingOrient].getTargetOrientation();
 
-    		if (targetOrient == Knot.OVER) /// i is the wrong number
+    		// if the target orientation of the ith arc is over then add i to the over stack of the target crossing
+    		if (targetOrient == Knot.OVER) 
     		{
-    			// System.out.println("pushed over " + i + " to crossing " + targetNum);
     			colouringPositions.pushOver(targetNum, i);
+    			// System.out.println("pushed over " + i + " to crossing " + targetNum);
     		}
-    		else
+    		else // if the target orientation of the arc is under then add i to the under stack of the target crossing
     		{
-    			// System.out.println("pushed under " + i + " to crossing " + targetNum);
     			colouringPositions.pushUnder(targetNum, i);
+    			// System.out.println("pushed under " + i + " to crossing " + targetNum);
     		}
 
     		i++;
-
-	    	// then 2x - y - z = 0 (mod p), where x is the number on the over crossings and y and z are the unders
      	}
 
     	////////////////////////////////////////////
 
-
+     	//retrieve the arcs involved in each crossing, then apply constraints
      	for (int j = 0; j < colouringPositions.size(); j++)
      	{
-     		// System.out.println("                                                     j = " + j);
      		int over1, over2;
      		int under1, under2;
 
@@ -184,20 +151,12 @@ public static final String ANSI_WHITE = "\u001B[37m";
      		over2 = colouringPositions.popOver(j);
      		under1 = colouringPositions.popUnder(j);
      		under2 = colouringPositions.popUnder(j);
-
      		// System.out.println("over1 = " + over1 + "  |  over2 = " + over2);
      		// System.out.println("under1 = " + under1 + "  |  under2 = " + under2);
 
-
-     		// overarcs at a crossing must take the same colour
-
-     		// System.out.println("arc length" + arc.length);
-
-     		// System.out.println("arc[over1] " + arc[over1]);
-     		// System.out.println("arc[over2] " + arc[over2]);
-
-     		// System.out.println(" ** making these equal " + arc[over1] + "  |  " + arc[over2]);
+     		// overarcs at a crossing must take the same value
      		model.addConstraint(eq(arc[over1], arc[over2]));
+     		// System.out.println(" ** making these equal " + arc[over1] + "  |  " + arc[over2]);
 
      		// labels on arcs have to conform at crossings to the equation
      		//		2x - y - z = 0 mod p
@@ -207,14 +166,14 @@ public static final String ANSI_WHITE = "\u001B[37m";
      		// model.addConstraint(mod(minus(minus(mult(arc[over1], constant(2)), arc[under1]), arc[under2])
      		//, constant(0), constant(pColours)));
 
-     		// System.out.println("EQUATION ---------> 2*" + over1 + " - " + under1 + " - " + under2 + " = 0");
-
      		Constraint negP = eq(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), ((-1) * pColours));
      		Constraint zero = eq(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), 0);
      		Constraint p = eq(minus(minus(mult(arc[over1], 2), arc[under1]), arc[under2]), pColours);
      		model.addConstraint(or(negP, zero, p));
-     	}
 
+    		// System.out.println("EQUATION ---------> 2*" + over1 + " - " + under1 + " - " + under2 + " = 0");
+
+     	}
 
      	// we must also set the constraint that some arc value is not the same as the rest
      	for (int k = 0; k < numOfArcs - 1; k++)
@@ -233,7 +192,7 @@ public static final String ANSI_WHITE = "\u001B[37m";
 
     	// System.out.println(ANSI_GREEN);
 
-    	if(success)
+    	if (success)
     	{
 	    	for (int k = 0; k < numOfArcs; k++)
 	    	{
@@ -241,23 +200,23 @@ public static final String ANSI_WHITE = "\u001B[37m";
 
 	    		switch (solution)
 	    		{
-	    			// case 0: colour = ANSI_RED;
-	    			// 		break;
-	    			// case 1: colour = ANSI_GREEN;
-	    			// 		break;
-	    			// case 2: colour = ANSI_BLUE;
-	    			// 		break;
-	    			// case 3: colour = ANSI_YELLOW;
-	    			// 		break;
-	    			// case 4: colour = ANSI_CYAN;
-	    			// 		break;
-	    			// case 5: colour = ANSI_PURPLE;
-	    			// 		break;
-	    			default: colour = "";//ANSI_WHITE;
+	    			case 0: colour = ANSI_RED;
+	    					break;
+	    			case 1: colour = ANSI_GREEN;
+	    					break;
+	    			case 2: colour = ANSI_BLUE;
+	    					break;
+	    			case 3: colour = ANSI_YELLOW;
+	    					break;
+	    			case 4: colour = ANSI_CYAN;
+	    					break;
+	    			case 5: colour = ANSI_PURPLE;
+	    					break;
+	    			default: colour = ANSI_WHITE;
 	    					break;
 	    		}
 
-				System.out.println(colour + "arc " + k + " colour " + solution);// + ANSI_RESET);
+				System.out.println(colour + "arc " + k + " colour " + solution + ANSI_RESET);
 
 	    	}
     	}

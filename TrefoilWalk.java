@@ -59,6 +59,24 @@ public class TrefoilWalk
 			System.out.println("The colouring failed");
 		}
 
+		int k = 3;
+
+		while (true)
+		{
+			colourist = new Colourist(trefoil, k);
+		
+		if (k % 3 != 0)
+		{
+			System.out.println("Trying " + k);
+			if (colourist.isColourable())
+			{
+				System.out.println("SUCCESS");
+				break;
+			}
+		}
+
+		k = k + 2;
+		}
 		System.out.println(" " + trefoil.getFirstCrossing().getOrderAdded());
 
 		// System.out.println("We've visited " + knotsVisited + " crossings in this walk");
