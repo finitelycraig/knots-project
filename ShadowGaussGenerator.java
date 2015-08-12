@@ -18,7 +18,7 @@ import choco.cp.solver.search.integer.varselector.RandomIntVarSelector;
 
 public class ShadowGaussGenerator
 {
-	private Model model;  
+    private Model model;  
     private Solver solver;
     private int numOfCrossings;
     private IntegerVariable[] letter; //letter[i] is an letter in the Gauss code with value [0, numOfCrossings - 1]
@@ -31,7 +31,7 @@ public class ShadowGaussGenerator
 
         numOfCrossings = crossings;
 
-    	letter = makeIntVarArray("arc ", (2 * numOfCrossings), 1, numOfCrossings);
+        letter = makeIntVarArray("arc ", (2 * numOfCrossings), 1, numOfCrossings);
 
         // add the constraint that everything can only appear twice
         for (int k = 1; k <= numOfCrossings; k++)
@@ -74,10 +74,10 @@ public class ShadowGaussGenerator
 
         IntegerVariable[] maxSoFar = makeIntVarArray("maxSoFar", ((2 * numOfCrossings) - 1), 0, numOfCrossings);
 
-        for (int i = 0; i < (2 * numOfCrossings - 1); i ++)
+        for (int i = 1; i < (2 * numOfCrossings - 1); i ++)
         {
-            model.addConstraint(max(Arrays.copyOfRange(letter, 0, i + 1), maxSoFar[i]));
-            model.addConstraint(leq(letter[i], sum(maxSoFar[i], constant(1))));
+            model.addConstraint(max(Arrays.copyOfRange(letter, 0, i), maxSoFar[i]));
+            model.addConstraint(leq(letter[i], plus(maxSoFar[i], constant(1))));
         }
 
         solver.read(model);
@@ -89,14 +89,7 @@ public class ShadowGaussGenerator
 
         if (solver.solve().booleanValue())
         {
-            for (int i = 0; i < (2*numOfCrossings); i++)
-            {
-            // System.out.println("i = " + i);
-            System.out.print("" + solver.getVar(letter[i]).getVal() + ", ");
-            }
-            System.out.print("\n");
-
-            while (solver.nextSolution().booleanValue()) 
+            do
             {
                 for (int i = 0; i < (2*numOfCrossings); i++)
                 {
@@ -104,9 +97,8 @@ public class ShadowGaussGenerator
                 }
                 System.out.print("\n");
             }
+            while (solver.nextSolution().booleanValue());
         }
-
-        solver.solve(true);
 
         // for (int i = 0; i < (2*numOfCrossings); i++)
         // {
