@@ -105,9 +105,9 @@ public class Gauss {
                 codes.add(lexMinInClass(gaussCode, n));
 
                 List<Integer> l = new ArrayList<Integer>();
-                int[] xs = new int[] {1, 1, 2, 2, 3, 4, 5, 3, 4, 6, 6, 5};
-                for (int i=0; i<xs.length; i++)
-                    l.add(xs[i]);
+                // int[] xs = new int[] {1, 1, 2, 2, 3, 4, 5, 3, 4, 6, 6, 5};
+                // for (int i=0; i<xs.length; i++)
+                //     l.add(xs[i]);
 
                 if (lexMinInClass(gaussCode, n).equals(l)) {
                     System.out.print("       ");
