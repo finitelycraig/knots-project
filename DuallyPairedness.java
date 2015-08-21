@@ -7,7 +7,8 @@ public class DuallyPairedness
 		// james' test case that is paired
 		// int[] thing = new int[] {1, 1, 2, 2, 3, 4, 5, 3, 4, 6, 6, 5};
 		//something that isn't paired
-		int[] thing = new int[] {1, 3, 4, 2, 1, 5, 2, 3, 5, 4};
+		// int[] thing = new int[] {1, 3, 4, 2, 1, 5, 2, 3, 5, 4};
+		int[] thing = new int[] {1, 2, 3, 1, 4, 3, 2, 4};
 		int[] wStar = gcStar(thing);
 		if (isDuallyPaired(wStar))
 		{

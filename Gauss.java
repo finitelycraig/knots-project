@@ -133,7 +133,7 @@ public class Gauss {
         }
     }
 
-    static int[] lexRenumber(int[] gaussCode, int n) {
+    public static int[] lexRenumber(int[] gaussCode, int n) {
         int[] retval = new int[n*2];
         int[] newNums = new int[n];
         int maxSoFar = 0;
@@ -147,7 +147,7 @@ public class Gauss {
         return retval;
     }
 
-    static List<Integer> lexMinInClass(int[] gaussCode, int n) {
+    public static List<Integer> lexMinInClass(int[] gaussCode, int n) {
         int[] minInClass = gaussCode;
         int[] reversedCode = reversed(gaussCode);
         if (lexLt(lexRenumber(reversedCode, n), gaussCode))
@@ -165,7 +165,7 @@ public class Gauss {
         return retval;
     }
 
-    static int[] reversed(int[] arr) {
+    public static int[] reversed(int[] arr) {
         int len = arr.length;
         int[] retval = new int[len];
         for (int i=0; i<len; i++) {
@@ -174,7 +174,7 @@ public class Gauss {
         return retval;
     }
 
-    static int[] rotated(int[] arr, int rotateBy) {
+    public static int[] rotated(int[] arr, int rotateBy) {
         int len = arr.length;
         int[] retval = new int[len];
         for (int i=0; i<len; i++) {
@@ -183,7 +183,7 @@ public class Gauss {
         return retval;
     }
     
-    static boolean lexLt(int[] arr1, int[] arr2) {
+    public static boolean lexLt(int[] arr1, int[] arr2) {
         int len = arr1.length;
         for (int i=0; i<len; i++) {
             if (arr1[i] < arr2[i]) return true;
@@ -192,14 +192,14 @@ public class Gauss {
         return false;
     }
 
-    static void print(int[] arr) {
+    public static void print(int[] arr) {
         for (int i=0; i<arr.length; i++) {
             System.out.print(arr[i] + ", ");
         }
         System.out.println();
     }
 
-    static void print(List<Integer> list) {
+    public static void print(List<Integer> list) {
         for (Integer i : list) {
             System.out.print(i + ", ");
         }
