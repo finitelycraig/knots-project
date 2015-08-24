@@ -24,7 +24,7 @@ public class MathematicaPippingTest
 		// gaussString = "-1, -3, -4, 1, -2, 3, 4, 2";
 		// gaussString = "-1, -2, -3, -4, -5, 1, 2, 3, 4, 5";
 
-		ma.drawArcPresentation(gaussString);
+		// ma.drawArcPresentation(gaussString);
 		ma.drawPlanarDiagram(gaussString);
 
 
